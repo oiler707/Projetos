@@ -82,6 +82,11 @@ Class ControladorLojaAPI
 						});
 
 
+
+
+						$ModeloHistorico->SalvarHistoricos($Salvar);
+						echo(true);
+
 						$ModeloCliente = new ModeloCliente();
 
 			
@@ -95,9 +100,6 @@ Class ControladorLojaAPI
 						$ModeloEmail = new ControladorEnvioEmail();
 
 						$ModeloEmail->DisparoPedido(json_decode($_POST['ObjetoSistema'],true)['Id'],$FiltroUnico[0]["Nome"],2);
-
-						$ModeloHistorico->SalvarHistoricos($Salvar);
-						echo(true);
 					}
 				}
 				
@@ -125,11 +127,14 @@ Class ControladorLojaAPI
 
 			$NovoCodigo =end($Historicos)["Id"]+10;
 
+			$NovoPedido = (object)["Id"=>$NovoCodigo,"CodigoCliente" => $_SESSION["UsuarioConectado"],"Data"=>json_decode(json_encode($Data),true)["date"],"Status"=>"Pendente","Produtos"=>$Produtos,"Total"=>intval($Total)];
 
-//				$_SESSION["UsuarioConectado"]
+			array_push($Historicos,$NovoPedido);
 
-			//$NovoCodigo =end($Clientes)["Id"]+10;
-			//echo("Aqui");	
+			$ModeloHistorico->SalvarHistoricos($Historicos);
+		
+			echo(true);
+		
 			$ModeloCliente = new ModeloCliente();
 
 			
@@ -144,13 +149,6 @@ Class ControladorLojaAPI
 
 			$ModeloEmail->DisparoPedido($NovoCodigo,$FiltroUnico[0]["Nome"],1);
 
-			$NovoPedido = (object)["Id"=>$NovoCodigo,"CodigoCliente" => $_SESSION["UsuarioConectado"],"Data"=>json_decode(json_encode($Data),true)["date"],"Status"=>"Pendente","Produtos"=>$Produtos,"Total"=>intval($Total)];
-
-			array_push($Historicos,$NovoPedido);
-
-			$ModeloHistorico->SalvarHistoricos($Historicos);
-		
-			echo(true);
 		}
 
 
