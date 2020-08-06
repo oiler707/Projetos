@@ -1,0 +1,730 @@
+<head>
+	<style>
+.Centralizador{
+        text-align: -webkit-center;
+    
+}
+.Centralizador > :nth-child(1){
+     background: #779fef;
+}
+.Centralizador > :nth-child(3){
+     background: #779fef;
+}
+
+.Titulo{
+text-align: center;
+  display: flex;
+    padding: 5px 10px;
+   border: 2px solid #779fef;
+    font-family: sans-serif;
+    font-size: 17px;
+  
+}
+.Titulo div{
+
+border: 2px solid #779fef;
+width: -webkit-fill-available;
+    color: white;
+}
+.TituloVersao{
+    width: 400px;
+    padding: 10px 20px;
+}
+.Versao{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    width: fit-content;
+        display: grid;  
+    
+}
+.Modulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloModulos{
+    min-width: 400px;
+    padding: 10px 20px;
+        margin: 16% 0%;
+}
+.Capitulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloCapitulos{
+    min-width: 400px;
+    padding: 10px 20px;
+}
+
+
+.Enfileirado{
+    display:inline-flex;
+}
+.Enfileirado div{
+text-align: center;
+   background: white;
+    color: black;
+    
+    
+    font-family: sans-serif;
+    font-size: 17px;
+    width: -webkit-fill-available;
+        display: grid;  
+        align-items: baseline;
+}
+.Enfileirado div:hover{
+   background: #779fef;
+    color: white;
+cursor: pointer;
+border: 2px solid black;
+}
+
+body{
+    margin: 0px;
+}
+.CorpoSite{  
+
+  height: calc(100% - 73px);
+display: flex;
+    overflow: auto;
+}
+
+  .PosicionadoDireita{
+text-align: right;
+font-size: 11px;
+    font-family: monospace;
+}
+
+  
+  .CorpoSite div{
+    
+        text-align: -webkit-center;
+
+
+        padding: 5px 10px;
+        border: 2px solid black;
+        font-family: sans-serif;
+        font-size: 17px;
+      
+
+
+  }
+.CorpoSite .Tabelado{
+      
+           display: block;
+
+
+
+}
+
+.Tabelado div{
+    width: -webkit-fill-available;
+    display: block;
+    
+
+font-size: 11px;
+    font-family: monospace;
+}
+.Lista{
+    text-align: -webkit-center;
+    display: grid;
+    height: fit-content;
+    width: -webkit-fill-available;
+}
+.Lista div {display: inline-block;    font-size: 11px;
+    font-family: monospace;text-align: center;}
+.Lista div div{width: 200px;
+
+}
+.Lista div div div{width: -webkit-fill-available;
+
+}
+.Tabelado .ListaPedido{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+  
+}
+.Tabelado .ListaPedidoUltimo{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+  
+}
+.ListaPedido div{
+    width: 75px;
+    align-items: center;display: grid;
+}
+.ListaPedidoUltimo div{
+
+      width: 25px;
+    align-items: center;display: grid;
+}
+.NovoPedido{
+    height: 45%;
+        overflow: auto;
+        visibility: collapse;
+}
+.HistoricoPedidos{
+    height: 45%;
+    overflow:auto;
+}
+.HistoricoPedidos div{
+    display: inline-flex;
+}
+.ListaPedidoUltimo .EspacoMaior{
+
+    width: 175px;
+}
+
+.MenuEditar {
+  position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+  }
+
+.MenuEditar div{
+      margin-top: 100px;
+    background: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    
+}
+.MenuEditar div div{
+    padding:5px;
+display: flex;
+    margin: auto;
+    height: min-content;
+      
+        width: -webkit-fill-available;
+}
+.MenuEditar div div div{
+         width: fit-content;
+    text-align: center;
+}
+
+.MenuEditar input{
+      width: inherit;
+}
+.MenuCriar {
+  position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+  }
+
+.MenuCriar div{
+      margin-top: 100px;
+    background: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    
+}
+.MenuCriar div div{
+    padding:5px;
+display: flex;
+    margin: auto;
+    height: min-content;
+      
+        width: -webkit-fill-available;
+}
+.MenuCriar div div div{
+         width: fit-content;
+    text-align: center;
+}
+
+.MenuCriar input{
+      width: inherit;
+}
+.VerProdutos{
+
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+}
+
+.VerProdutos div{
+      margin-top: 100px;
+    background: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    
+}
+.VerProdutos div div{
+    padding:5px;
+display: flex;
+    margin: auto;
+    height: min-content;
+      
+        width: -webkit-fill-available;
+}
+.VerProdutos .ListaProdutos{
+      display: block;
+    padding: 0px;
+    border: 0;
+}
+
+.Notificacao{
+      position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+}
+
+.Notificacao div{
+     margin-top: 100px;
+    background: white;
+    border: 2px solid black;
+   text-align: end;
+    width: 300px;
+}
+
+.Notificacao div div{
+     padding:20px;
+text-align: center;
+    margin: auto;
+    height: min-content;
+      
+        width: -webkit-fill-available;
+}
+}
+</style>
+</head>
+<body>
+<div class="Centralizador">
+    <div class="Titulo">
+      <div>
+      </div>
+      <div class="Enfileirado">
+<div onclick="ListarPedidos()">Listar Pedidos</div>
+<div onclick="ListarClientes()">Listar Clientes</div>
+<div onclick="MostrarProdutos()">Listar Produtos</div>
+<div onclick="Desconectar()">Desconectar</div>
+
+      </div>
+    </div>
+<div class="CorpoSite">
+<div class="Lista">
+	
+
+</div>
+
+</div>
+    <div>
+        <div class="Centralizador">
+    <div class="Titulo">
+        <div class="PosicionadoDireita">
+             Projeto Lanchonete Rits 2020
+        </div>
+    </div>
+
+
+
+<script>
+var Produtos;
+var Pedidos;
+
+
+function ListarClientes(){
+
+var ListarClientes = new Worker("../../WorkerExterno/ListarClientes.js");
+        
+        ListarClientes.postMessage({
+              
+
+        })
+        
+        
+        ListarClientes.onmessage= function(e){
+            
+
+        	
+            //Clientes=JSON.parse(e.data["RetornoSistema"])
+            Cabecalho='<div><div>Clientes</div></div>'+
+      		'<div>'+
+			'<div>Nome</div><div>Email</div><div>Telefone</div><div>Endereço</div>'+
+    		'</div>';
+      		
+      		JSON.parse(e.data["RetornoSistema"]).forEach(function(u){
+      		console.log(u)
+
+      		Cabecalho+="<div>"+
+      		"<div>"+u["Nome"]+"</div><div>"+u["Email"]+"</div><div>"+FormatoTelefone(u["Telefone"])+"</div><div>"+u["Endereco"]+"</div>"+
+      		"</div>"
+
+      		})
+      		document.getElementsByClassName("Lista")[0].innerHTML=Cabecalho;
+
+        
+    }
+
+
+
+
+
+}
+
+function CapturaProdutos(){
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutoClientes.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+        ProdutosClientes.onmessage= function(e){
+            Produtos=JSON.parse(e.data["RetornoSistema"])
+
+          }
+}
+
+function MostrarProdutos(){
+        
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutosAtivos.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+         Cabecalho='<div><div>Produtos</div><div><button onclick="CriarProduto()">Novo Produto</button></div></div>'+
+      		'<div>'+
+			'<div>Produto</div><div>Preço</div><div>Editar</div><div style="color:white">_</div>'+
+    		'</div>';
+        
+        ProdutosClientes.onmessage= function(e){
+          console.log(e.data["RetornoSistema"])
+            Produtos=JSON.parse(e.data["RetornoSistema"])
+               
+            
+
+
+            JSON.parse(e.data["RetornoSistema"]).forEach(function(e){
+
+               Cabecalho+= '<div><div>'+e["Nome"]+'</div><div>'+"R$ : "+e["Preco"].toFixed(2)+'</div>'+
+               '<div onclick="EditarProduto('+e['Id']+')"><button>Editar</button></div>'+'<div onclick="ExcluirProduto('+e['Id']+')"><button>Excluir</button></div>'+ '</div>'
+
+            })
+
+          document.getElementsByClassName("Lista")[0].innerHTML =Cabecalho;
+        }
+
+}
+function CriarProduto(){
+
+ document.getElementsByClassName("MenuCriar")[0].style.visibility="visible";
+
+ 
+
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value=""
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value=""
+
+
+ 
+
+}
+
+
+function EditarProduto(Id){
+
+  document.getElementsByClassName("MenuEditar")[0].style.visibility="visible";
+
+  Produtos.filter(z=>z.Id==Id)[0].Nome
+  Produtos.filter(z=>z.Id==Id)[0].Preco
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value=  Produtos.filter(z=>z.Id==Id)[0].Nome;
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value=  Produtos.filter(z=>z.Id==Id)[0].Preco
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[0].setAttribute("onclick","EditarProdutoSistema("+Id+")")
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[2].setAttribute("onclick","ExcluirProduto("+Id+")")
+}
+
+function CancelarCriar(){
+document.getElementsByClassName("MenuCriar")[0].style.visibility="collapse";
+
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value=""
+   document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value=""
+
+}
+
+function CancelarEditar(){
+document.getElementsByClassName("MenuEditar")[0].style.visibility="collapse";
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value=""
+   document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value=""
+document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[0].removeAttribute("onclick")
+document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[2].removeAttribute("onclick")
+}
+
+function ExcluirProduto(Id){
+
+var ExcluirProduto = new Worker("../../WorkerExterno/ExcluirProduto.js");
+        
+        ExcluirProduto.postMessage({
+              
+          "IdProduto":Id
+        })
+        
+        
+        ExcluirProduto.onmessage= function(e){
+          //console.log(e.data["RetornoSistema"])
+          if(e.data["RetornoSistema"]){
+
+            MostrarProdutos();
+          }
+        }
+
+}
+function EditarProdutoSistema(Id){
+    var EditarProdutoSistema= new Worker("../../WorkerExterno/EditarProduto.js");
+     EditarProdutoSistema.postMessage({
+              
+          "IdProduto":Id,
+          "Nome":document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value,
+          "Preco":document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value
+
+        })
+        
+        
+        EditarProdutoSistema.onmessage= function(e){
+          console.log(e.data["RetornoSistema"])
+           if(e.data["RetornoSistema"]==true){
+              MostrarProdutos();
+            CancelarEditar();
+
+            }
+            else{
+          document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML=e.data["RetornoSistema"];
+          document.getElementsByClassName("Notificacao")[0].style.visibility="visible";
+          }
+
+        }
+
+}
+
+function CriarProdutoSistema(){
+
+      var CriarProdutoSistema= new Worker("../../WorkerExterno/CriarProduto.js");
+     CriarProdutoSistema.postMessage({
+              
+          
+          "Nome":document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value,
+          "Preco":document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value
+
+        })
+        
+        
+        CriarProdutoSistema.onmessage= function(e){
+
+          if(e.data["RetornoSistema"]==true){
+            MostrarProdutos();
+            CancelarCriar();
+          }
+          else{
+              document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML=e.data["RetornoSistema"];
+          document.getElementsByClassName("Notificacao")[0].style.visibility="visible";
+          }
+
+
+
+        }
+
+
+}
+function ListarPedidos(){
+  CapturaProdutos();
+  var TodosPedidos= new Worker("../../WorkerExterno/TodosPedidos.js");
+      TodosPedidos.postMessage({
+           
+
+        })
+                Cabecalho='<div><div>Pedidos</div></div>'+
+          '<div>'+
+      '<div>Codigo Cliente</div><div>Produtos</div><div>Data Criação</div><div>Status Atendimento</div>'+
+        '</div>';
+        
+        TodosPedidos.onmessage= function(u){
+         
+
+          Pedidos=JSON.parse(u.data["RetornoSistema"])
+          JSON.parse(u.data["RetornoSistema"]).forEach(function(e){
+          TempProduto=0;    
+               e["Produtos"].forEach(function(o){
+         
+          TempProduto+=parseInt(o["Quantidade"]);
+
+            })
+
+  SelecionadorAtendimento="<select onchange=ModificarStatusAtendimento("+e["Id"]+",this)><option style='display:none'>"+e['Status']+"</option><option value='Pendente'>Pendente</option><option value='Em preparo'>Em preparo</option><option value='Em entrega'>Em entrega</option><option value='Entregue'>Entregue</option><option value='Cancelado'>Cancelado</option></select>"
+
+
+
+            Cabecalho+="<div><div>"+e["CodigoCliente"]+"</div><div onclick='VerProdutos("+e['Id']+")'>"+TempProduto+" Itens - Ver </div><div>"+new Date(e["Data"]).toLocaleString("pt-BR").replace(" "," às ")+"</div><div>"+SelecionadorAtendimento+"</div></div>"
+
+          });
+
+          document.getElementsByClassName("Lista")[0].innerHTML =Cabecalho;
+
+        
+
+  }
+}
+
+function VerProdutos(Id){
+
+document.getElementsByClassName("VerProdutos")[0].style.visibility="visible";
+Cabecalho=""
+Pedidos.filter(z=>z["Id"]==Id)[0].Produtos.forEach(function(e){
+if(Produtos.filter(z=>z["Id"]==e["Id"])[0]["Ativo"]==true){
+  Cabecalho+="<div><div>"+e["Id"]+"</div><div>"+Produtos.filter(z=>z["Id"]==e["Id"])[0]["Nome"]+"</div><div>"+e["Quantidade"]+"</div></div>";
+}
+else{
+    Cabecalho+="<div><div>"+e["Id"]+"</div><div>"+Produtos.filter(z=>z["Id"]==e["Id"])[0]["Nome"]+" (Inativo)</div><div>Pediram "+e["Quantidade"]+"</div></div>";
+
+}
+
+})
+document.getElementsByClassName("ListaProdutos")[0].innerHTML=Cabecalho;
+}
+
+
+function FecharVerProdutos(){
+
+  document.getElementsByClassName("VerProdutos")[0].style.visibility="collapse";
+}
+
+
+function Desconectar(){
+  var Desconectar= new Worker("../../WorkerExterno/Desconectar.js");
+      Desconectar.postMessage({
+
+        })
+
+      Desconectar.onmessage= function(e){
+          if(e.data["RetornoSistema"]==true){
+
+            window.location.href="../../"
+          }
+       
+      }
+}
+function ModificarStatusAtendimento(Id,element){
+    
+
+    var ModificarStatusAtendimento= new Worker("../../WorkerExterno/ModificarStatusAtendimento.js");
+      ModificarStatusAtendimento.postMessage({
+        "Id":Id,
+        "Status":element.value
+        })
+
+      ModificarStatusAtendimento.onmessage= function(e){
+          
+       console.log(e.data["RetornoSistema"])
+      }
+
+}
+
+function FormatoTelefone(Telefone){
+  if(Telefone.length==12){
+    return "("+(Telefone).substring(0,3)+")"+(Telefone).substring(3,8)+"-"+(Telefone).substring(8)
+  }
+  if(Telefone.length==11){
+    return "("+(Telefone).substring(0,3)+")"+(Telefone).substring(3,7)+"-"+(Telefone).substring(7)
+
+  }
+}
+function FecharNotificacao(){
+document.getElementsByClassName("Notificacao")[0].style.visibility="collapse";
+document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML="";
+}
+</script>
+
+
+
+<div class="MenuEditar">
+  <div><div><div>
+  Editar Produto</div>
+</div>
+<div><div>Nome:</div> 
+    <input type="text">
+    </div>
+    <div><div>
+      Preço:
+    </div><input type="number" step="0.1">
+    </div><div><div>
+    <button onclick="EditarProdutoSistema()">Editar</button><button onclick="CancelarEditar()">Cancelar</button><button onclick="ExcluirProduto()">Excluir</button></div>
+  </div>
+</div>
+</div>
+
+<div class="MenuCriar">
+  <div><div><div>
+  Novo Produto</div>
+</div>
+<div><div>Nome:</div> 
+    <input type="text">
+    </div>
+    <div><div>
+      Preço:
+    </div><input type="number" step="0.1">
+    </div><div><div>
+    <button onclick="CriarProdutoSistema()">Criar</button><button onclick="CancelarCriar()">Cancelar</button></div>
+  </div>
+</div>
+</div>
+
+<div class="VerProdutos">
+  <div><div><div>Produtos</div><div><button onclick="FecharVerProdutos()">Fechar</button></div></div>
+    <div><div>Id</div><div>Nome</div><div>Quantidade</div></div>
+    <div class="ListaProdutos">
+
+
+</div>
+
+
+</div>
+  
+  
+</div>
+
+
+
+</div>
+</div>
+<div class="Notificacao">
+  <div><div class="Texto">
+    </div>
+    <button onclick="FecharNotificacao()">Fechar</button>
+  </div>
+</div>
+
+
+    </body>
