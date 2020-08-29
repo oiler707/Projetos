@@ -1,0 +1,1196 @@
+<head>
+	<style>
+
+:root{
+    --blue:#bccff5;
+    --gray:#c7c7c7;
+    --blueActive:#3431b9;
+}
+
+
+.Centralizador{
+        text-align: -webkit-center;
+    
+}
+
+
+
+.Centralizador > :nth-child(3){
+  height: 27px;
+
+}
+
+.Titulo{
+text-align: center;
+  display: flex;
+     background: var(--blue);
+   border: 2px solid var(--blue);
+     border-top: 1px solid var(--blue);
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+
+.Titulo div{
+
+
+width: -webkit-fill-available;
+    color: white;
+}
+.TituloVersao{
+    width: 400px;
+    padding: 10px 20px;
+}
+.Versao{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    width: fit-content;
+        display: grid;  
+    
+}
+.Modulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloModulos{
+    min-width: 400px;
+    padding: 10px 20px;
+        margin: 16% 0%;
+}
+.Capitulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloCapitulos{
+    min-width: 400px;
+    padding: 10px 20px;
+}
+
+
+.Enfileirado{
+    display:inline-flex;
+}
+
+.Enfileirado div{
+text-align: center;
+   
+    color: black;
+    
+    
+    font-family: sans-serif;
+    font-size: 18px;
+    width: -webkit-fill-available;
+        display: grid;  
+        align-items: baseline;
+        background: var(--blue)
+       border:0px solid;
+       align-content:center;
+        min-height: 40px;
+}
+.Enfileirado div:hover{
+   background: var(--blueActive); 
+cursor: pointer;color: white;
+
+ border:0px solid;
+}
+
+body{
+    margin: 0px;
+}
+.CorpoSite{  
+justify-content: center;
+  height: calc(100% - 73px);
+display: flex;
+    overflow: auto;
+}
+.Lista button{
+    align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     min-width: fit-content;
+     width: 50%;
+
+}
+.Lista button:focus{
+    outline: none;  
+}
+
+.Lista button:hover{
+
+        cursor: pointer;
+    background: var(--blueActive);
+    color: white;
+   
+    border: 1px solid var(--gray);
+  width: 50%;
+    outline: none;
+}
+
+  .PosicionadoDireita{
+align-self: center;
+    text-align: right;
+    font-size: 15px;
+    margin-right: 10px;
+    font-family: sans-serif;
+}
+
+  
+  .CorpoSite div{
+text-align: -webkit-center;
+    border: 2px solid white;
+    display: inline-grid;
+    align-self: center;
+    overflow: auto;
+      height: -webkit-fill-available;
+
+    font-family: sans-serif;
+    font-size: 17px;
+  }
+.CorpoSite .Tabelado{
+      
+           display: block;
+
+
+
+}
+
+.Tabelado div{
+    width: -webkit-fill-available;
+    display: block;
+    
+
+font-size: 11px;
+    font-family: monospace;
+}
+.Lista{
+
+  text-align: -webkit-center;
+    border: 2px solid white;
+    display: inline-grid;
+    align-self: center;
+    overflow: auto;
+    height: -webkit-fill-available;
+    max-height: 95%;
+        padding: 5px 10px;
+
+}
+.Lista div {
+      grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "a b c d";
+    display: grid;
+    width: auto;
+    padding: 0px;
+    border: 0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    text-align: initial;
+        height: auto;
+
+
+  }
+
+
+  .Lista select{
+    font-size: 17px;
+    font-family: sans-serif;
+    cursor: pointer;
+        padding: 5px 10px;
+        border: 1px solid var(--gray);
+        background: #e8e8e8;
+        border-radius: 4px;
+  }
+  .Lista select:focus {
+    outline: none;
+    
+  }
+
+
+  .Lista div:nth-child(1) {
+    display: grid;
+    grid-template-areas: "a b c d e";
+    grid-template-columns: repeat(5,1fr);
+
+}
+
+.Lista div div:nth-child(1){
+text-align: left;
+
+  grid-template-columns: repeat(1,1fr);
+  
+}
+
+.Lista div:nth-child(1) div:nth-child(1){
+
+grid-area:c;
+justify-content:center;
+  grid-template-columns: repeat(1,1fr);
+      text-align: center;
+
+}
+.Lista div:nth-child(1) div:nth-child(2){
+
+grid-area:e;
+justify-content:flex-end;
+  grid-template-columns: repeat(1,1fr);
+    
+
+}
+.Lista div div{
+  box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+
+}
+.Lista div div div{
+
+  width: -webkit-fill-available;
+
+}
+
+.Tabelado .ListaPedido{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+  
+}
+.Tabelado .ListaPedidoUltimo{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+  
+}
+.ListaPedido div{
+    width: 75px;
+    align-items: center;display: grid;
+}
+.ListaPedidoUltimo div{
+
+      width: 25px;
+    align-items: center;display: grid;
+}
+.NovoPedido{
+    height: 45%;
+        overflow: auto;
+        visibility: collapse;
+}
+.HistoricoPedidos{
+    height: 45%;
+    overflow:auto;
+}
+.HistoricoPedidos div{
+    display: inline-flex;
+}
+.ListaPedidoUltimo .EspacoMaior{
+
+    width: 175px;
+}
+
+.MenuEditar {
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+        background: #43434394;}
+.Centralizador > :nth-child(3) .MenuEditar{
+
+  height: 100%;
+}
+.MenuEditar div{
+        margin-top: 100px;
+   
+    border: 0;
+ 
+    padding: 5px 10px;
+
+display:inline-grid;
+    height: auto;
+    max-height: 300px;
+    
+}
+.MenuEditar div div{
+     grid-template-columns:  200px 200px;
+
+    margin: unset;
+    padding:0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
+    border: 0px;
+    display:grid;
+
+
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.MenuEditar div div:nth-child(1){
+     grid-template-columns: 100px 200px 100px;
+     justify-content:center;
+}
+.MenuEditar div div:nth-child(4){
+  grid-template-columns: 400px;
+}
+
+.MenuEditar div div div{
+    grid-template-columns: repeat(1,1fr);
+   box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+
+}
+.MenuEditar div div div:nth-child(3){
+  justify-content:flex-end;
+}
+.MenuEditar div div div:nth-child(2){
+  justify-content:center;
+}
+
+.MenuEditar button{
+    align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     min-width: 40px;
+
+}
+
+.MenuEditar button:focus{
+   outline: none;
+
+}
+.MenuEditar button:hover{
+
+     background: var(--blueActive); 
+cursor: pointer;color: white;
+
+    border: 1px solid var(--gray);
+}
+.MenuEditar input{
+    height: 35px;
+    font-size: 17px;
+        border: 1px solid var(--gray);
+        width: inherit;
+}
+.MenuEditar input:focus{
+    outline: none;
+}
+
+
+.MenuCriar{
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+        background: #43434394;}
+.Centralizador > :nth-child(3) .MenuEditar{
+
+  height: 100%;
+}
+.MenuCriar div{
+        margin-top: 100px;
+   
+    border: 0;
+ 
+    padding: 5px 10px;
+
+display:inline-grid;
+    height: auto;
+    max-height: 300px;
+    
+}
+.MenuCriar div div{
+     grid-template-columns:  200px 200px;
+
+    margin: unset;
+    padding:0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
+    border: 0px;
+    display:grid;
+
+
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.MenuCriar div div:nth-child(1){
+     grid-template-columns: 100px 200px 100px;
+     justify-content:center;
+}
+.MenuCriar div div:nth-child(4){
+  grid-template-columns: 400px;
+}
+
+.MenuCriar div div div{
+    grid-template-columns: repeat(1,1fr);
+   box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+
+}
+.MenuCriar div div div:nth-child(3){
+  justify-content:flex-end;
+}
+.MenuCriar div div div:nth-child(2){
+  justify-content:center;
+}
+
+.MenuCriar button{
+    align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     min-width: 40px;
+
+}
+
+.MenuCriar button:focus{
+   outline: none;
+
+}
+.MenuCriar button:hover{
+
+     background: var(--blueActive); 
+cursor: pointer;color: white;
+
+    border: 1px solid var(--gray);
+}
+.MenuCriar input{
+    height: 35px;
+    font-size: 17px;
+        border: 1px solid var(--gray);
+        width: inherit;
+}
+.MenuCriar input:focus{
+    outline: none;
+}
+.VerProdutos{
+
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+        background: #43434394;
+}
+
+.VerProdutos div{
+      margin-top: 100px;
+   
+    border: 0;
+ 
+    padding: 5px 10px;
+
+display:inline-grid;
+    height: auto;
+    max-height: 300px;
+}
+.VerProdutos div div{
+  grid-template-columns: repeat(3,1fr);
+    margin: unset;
+    padding:0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
+    border: 0px;
+    display:grid;
+
+
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.VerProdutos div div div{
+   grid-template-columns: repeat(1,1fr);
+   box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+    min-width: 150px;
+}
+.VerProdutos button{
+    align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     min-width: 40px;
+
+}
+.VerProdutos button:hover{
+
+     background: var(--blueActive); 
+cursor: pointer;color: white;
+
+    border: 1px solid var(--gray);
+}
+.VerProdutos button:focus{
+
+  outline: none;
+
+}
+
+
+.VerProdutos div div:nth-child(1) div:nth-child(3){
+ justify-content: flex-end;
+  
+}
+.VerProdutos .ListaProdutos div:nth-child(1) div:nth-child(3){
+  justify-content: end;
+}
+.VerProdutos .ListaProdutos div{
+     grid-template-columns: repeat(3,1fr);
+
+}
+.VerProdutos .ListaProdutos{
+      display: inline-grid;
+    padding: 0px;
+    border: 0;
+    overflow: overlay;
+      grid-template-columns: repeat(1,1fr);
+}
+.VerProdutos .ListaProdutos div{
+  grid-template-columns: repeat(3,1fr);
+    margin: unset;
+    padding:0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
+    border: 0px;
+    display:grid;
+
+
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+.VerProdutos .ListaProdutos div div{
+   grid-template-columns: repeat(1,1fr);
+   box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+    min-width: 150px;
+
+}
+
+.Notificacao{
+      position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    padding: 20px;
+    background: #43434394;
+}
+
+.Notificacao div{
+    
+
+  
+   text-align: end;
+    width: 300px;
+
+
+ margin-top: 100px;
+   
+    border: 0;
+ 
+    padding: 5px 10px;
+
+display:inline-grid;
+    height: auto;
+    max-height: 300px;
+}
+
+.Notificacao div div{
+         margin: unset;
+    padding:20px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
+    border: 0px;
+    display:grid;
+
+
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.Notificacao button{
+      align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     width: fit-content;
+}
+.Notificacao button:hover{
+
+     background: var(--blueActive); 
+cursor: pointer;color: white;
+
+    border: 1px solid var(--gray);
+}
+.Notificacao button:focus{
+  outline: none;
+}
+.Notificacao div:nth-child(2){
+    padding: 0px 5px;
+    text-align: -webkit-right;
+}
+.Centralizador .Centralizador .Titulo{
+    height: 27px;
+
+}
+.Lista div div .Prods{
+  padding:0px;
+  width: 100px;
+}
+.Loading{
+        width: 100%;
+    height: 100%;
+    position: fixed;
+    display: grid;
+    top: 0;
+    background: #43434394;
+    z-index: 100;
+    grid-template-areas:
+        ".a."
+        ".a.";
+    justify-content: center;
+    align-items: center;
+    cursor: progress;
+    visibility: collapse;
+}
+.Loading div{
+    grid-area: a;
+    background: var(--blueActive);
+    text-align: center;
+    padding: 10px 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<div class="Centralizador">
+    <div class="Titulo">
+      <div>
+      </div>
+      <div class="Enfileirado">
+<div onclick="ListarPedidos()">Listar Pedidos</div>
+<div onclick="ListarClientes()">Listar Clientes</div>
+<div onclick="MostrarProdutos()">Listar Produtos</div>
+<div onclick="Desconectar()">Desconectar</div>
+
+      </div>
+    </div>
+<div class="CorpoSite">
+<div class="Lista">
+	
+
+</div>
+
+</div>
+    <div>
+        <div class="Centralizador">
+    <div class="Titulo">
+        <div class="PosicionadoDireita">
+             Loja Virtual 2020
+        </div>
+    </div>
+
+
+
+<script>
+var Produtos;
+var Pedidos;
+
+
+function ListarClientes(){
+CarregarPagina();
+var ListarClientes = new Worker("../../WorkerExterno/ListarClientes.js");
+        
+        ListarClientes.postMessage({
+              
+
+        })
+        
+        
+        ListarClientes.onmessage= function(e){
+            
+
+        	
+            //Clientes=JSON.parse(e.data["RetornoSistema"])
+            Cabecalho='<div><div>Clientes</div></div>'+
+      		'<div>'+
+			'<div>Nome</div><div>Email</div><div>Telefone</div><div>Endereço</div>'+
+    		'</div>';
+      		
+      		JSON.parse(e.data["RetornoSistema"]).forEach(function(u){
+      		console.log(u)
+
+      		Cabecalho+="<div>"+
+      		"<div>"+u["Nome"]+"</div><div>"+u["Email"]+"</div><div>"+FormatoTelefone(u["Telefone"])+"</div><div>"+u["Endereco"]+"</div>"+
+      		"</div>"
+
+      		})
+      		document.getElementsByClassName("Lista")[0].innerHTML=Cabecalho;
+          PararCarregamento();
+        
+    }
+
+
+
+
+
+}
+
+function CapturaProdutos(){
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutoClientes.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+        ProdutosClientes.onmessage= function(e){
+            Produtos=JSON.parse(e.data["RetornoSistema"])
+
+          }
+}
+
+function MostrarProdutos(){
+        CarregarPagina();
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutosAtivos.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+         
+        ProdutosClientes.onmessage= function(e){
+          Cabecalho='<div><div>Produtos</div><div><button onclick="CriarProduto()">Novo Produto</button></div></div>'+
+          '<div>'+
+      '<div>Produto</div><div>Preço</div><div></div><div style="color:white">_</div>'+
+        '</div>';
+           Produtos=JSON.parse(e.data["RetornoSistema"])
+               
+            
+
+
+            JSON.parse(e.data["RetornoSistema"]).forEach(function(e){
+
+               Cabecalho+= '<div><div>'+e["Nome"]+'</div><div>'+"R$ : "+e["Preco"].toFixed(2)+'</div><div></div>'+
+               '<div><button onclick="EditarProduto('+e['Id']+')">Editar</button><button onclick="ExcluirProduto('+e['Id']+')">Excluir</button></div>'+ '</div>'
+
+            })
+
+          document.getElementsByClassName("Lista")[0].innerHTML =Cabecalho;
+          PararCarregamento();
+        }
+
+}
+function CriarProduto(){
+
+ document.getElementsByClassName("MenuCriar")[0].style.visibility="visible";
+
+ 
+
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value=""
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value=""
+
+
+ 
+
+}
+
+
+function EditarProduto(Id){
+
+  document.getElementsByClassName("MenuEditar")[0].style.visibility="visible";
+
+  Produtos.filter(z=>z.Id==Id)[0].Nome
+  Produtos.filter(z=>z.Id==Id)[0].Preco
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value=  Produtos.filter(z=>z.Id==Id)[0].Nome;
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value=  Produtos.filter(z=>z.Id==Id)[0].Preco
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[1].setAttribute("onclick","EditarProdutoSistema("+Id+")")
+
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[3].setAttribute("onclick","ExcluirProduto("+Id+")")
+}
+
+function CancelarCriar(){
+document.getElementsByClassName("MenuCriar")[0].style.visibility="collapse";
+
+  document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value=""
+   document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value=""
+
+}
+
+function CancelarEditar(){
+document.getElementsByClassName("MenuEditar")[0].style.visibility="collapse";
+  document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value=""
+   document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value=""
+document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[1].removeAttribute("onclick")
+document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("button")[3].removeAttribute("onclick")
+}
+
+function ExcluirProduto(Id){
+CarregarPagina();
+var ExcluirProduto = new Worker("../../WorkerExterno/ExcluirProduto.js");
+        
+        ExcluirProduto.postMessage({
+              
+          "IdProduto":Id
+        })
+        
+        
+        ExcluirProduto.onmessage= function(e){
+          //console.log(e.data["RetornoSistema"])
+          if(e.data["RetornoSistema"]){
+            CancelarEditar();
+            PararCarregamento();
+            MostrarProdutos();
+
+          }
+        }
+
+}
+function EditarProdutoSistema(Id){
+    MostrarProdutos();
+    var EditarProdutoSistema= new Worker("../../WorkerExterno/EditarProduto.js");
+     EditarProdutoSistema.postMessage({
+              
+          "IdProduto":Id,
+          "Nome":document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[0].value,
+          "Preco":document.getElementsByClassName("MenuEditar")[0].getElementsByTagName("input")[1].value
+
+        })
+        
+        
+        EditarProdutoSistema.onmessage= function(e){
+           if(e.data["RetornoSistema"]==true){
+            PararCarregamento();
+              MostrarProdutos();
+            CancelarEditar();
+
+            }
+            else{
+              PararCarregamento();
+          document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML=e.data["RetornoSistema"];
+          document.getElementsByClassName("Notificacao")[0].style.visibility="visible";
+          }
+
+        }
+
+}
+
+function CriarProdutoSistema(){
+    CarregarPagina();
+      var CriarProdutoSistema= new Worker("../../WorkerExterno/CriarProduto.js");
+     CriarProdutoSistema.postMessage({
+              
+          
+          "Nome":document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[0].value,
+          "Preco":document.getElementsByClassName("MenuCriar")[0].getElementsByTagName("input")[1].value
+
+        })
+        
+        
+        CriarProdutoSistema.onmessage= function(e){
+
+          if(e.data["RetornoSistema"]==true){
+            PararCarregamento();
+            CancelarCriar();
+              MostrarProdutos();
+          }
+          else{
+             PararCarregamento();
+              document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML=e.data["RetornoSistema"];
+          document.getElementsByClassName("Notificacao")[0].style.visibility="visible";
+          }
+
+
+
+        }
+
+
+}
+function ListarPedidos(){
+  CapturaProdutos();
+  CarregarPagina()
+  var TodosPedidos= new Worker("../../WorkerExterno/TodosPedidos.js");
+      TodosPedidos.postMessage({
+           
+
+        })
+                Cabecalho='<div><div>Pedidos</div></div>'+
+          '<div>'+
+      '<div>Codigo Cliente</div><div>Produtos</div><div>Data Criação</div><div>Status Atendimento</div>'+
+        '</div>';
+        
+        TodosPedidos.onmessage= function(u){
+         
+
+          Pedidos=JSON.parse(u.data["RetornoSistema"])
+          JSON.parse(u.data["RetornoSistema"]).forEach(function(e){
+          TempProduto=0;    
+               e["Produtos"].forEach(function(o){
+         
+          TempProduto+=parseInt(o["Quantidade"]);
+
+            })
+
+  SelecionadorAtendimento="<select onchange=ModificarStatusAtendimento("+e["Id"]+",this)><option style='display:none'>"+e['Status']+"</option><option value='Pendente'>Pendente</option><option value='Em preparo'>Em preparo</option><option value='Em entrega'>Em entrega</option><option value='Entregue'>Entregue</option><option value='Cancelado'>Cancelado</option></select>"
+            axuItem="Item"
+            if(TempProduto>1){
+            axuItem="Itens"
+            }
+            Cabecalho+="<div><div>"+e["CodigoCliente"]+"</div><div><div class='Prods'>"+TempProduto+" "+axuItem+"</div>"+"<button onclick='VerProdutos("+e['Id']+")'>Ver</button>"+ "</div><div>"+new Date(e["Data"]).toLocaleString("pt-BR").slice(0,-3).replace(" "," às ")+"</div><div>"+SelecionadorAtendimento+"</div></div>"
+
+          });
+
+          document.getElementsByClassName("Lista")[0].innerHTML =Cabecalho;
+          PararCarregamento();
+        
+
+  }
+}
+
+function VerProdutos(Id){
+
+document.getElementsByClassName("VerProdutos")[0].style.visibility="visible";
+Cabecalho=""
+Pedidos.filter(z=>z["Id"]==Id)[0].Produtos.forEach(function(e){
+if(Produtos.filter(z=>z["Id"]==e["Id"])[0]["Ativo"]==true){
+  Cabecalho+="<div><div>"+e["Id"]+"</div><div>"+Produtos.filter(z=>z["Id"]==e["Id"])[0]["Nome"]+"</div><div>"+e["Quantidade"]+"</div></div>";
+}
+else{
+    Cabecalho+="<div><div>"+e["Id"]+"</div><div>"+Produtos.filter(z=>z["Id"]==e["Id"])[0]["Nome"]+" (Inativo)</div><div>Pediram "+e["Quantidade"]+"</div></div>";
+
+}
+
+})
+document.getElementsByClassName("ListaProdutos")[0].innerHTML=Cabecalho;
+}
+
+
+function FecharVerProdutos(){
+
+  document.getElementsByClassName("VerProdutos")[0].style.visibility="collapse";
+}
+
+
+function Desconectar(){
+  var Desconectar= new Worker("../../WorkerExterno/Desconectar.js");
+      Desconectar.postMessage({
+
+        })
+
+      Desconectar.onmessage= function(e){
+          if(e.data["RetornoSistema"]==true){
+
+            window.location.href="../../"
+          }
+       
+      }
+}
+function ModificarStatusAtendimento(Id,element){
+    CarregarPagina();
+
+    var ModificarStatusAtendimento= new Worker("../../WorkerExterno/ModificarStatusAtendimento.js");
+      ModificarStatusAtendimento.postMessage({
+        "Id":Id,
+        "Status":element.value
+        })
+
+      ModificarStatusAtendimento.onmessage= function(e){
+          
+       PararCarregamento();
+      }
+
+}
+
+function FormatoTelefone(Telefone){
+  if(Telefone.length==12){
+    return "("+(Telefone).substring(0,3)+") "+(Telefone).substring(3,8)+"-"+(Telefone).substring(8)
+  }
+  if(Telefone.length==11){
+    return "("+(Telefone).substring(0,3)+") "+(Telefone).substring(3,7)+"-"+(Telefone).substring(7)
+
+  }
+}
+function FecharNotificacao(){
+document.getElementsByClassName("Notificacao")[0].style.visibility="collapse";
+document.getElementsByClassName("Notificacao")[0].getElementsByClassName("Texto")[0].innerHTML="";
+}
+function CarregarPagina(){
+
+document.getElementsByClassName("Loading")[0].style.visibility="visible";
+
+
+
+document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML="Carregando"
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 1000))
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 2000))
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 3000))
+
+TempLoad.push(setTimeout(function(){if(document.getElementsByClassName("Loading")[0].style.visibility=="visible"){CarregarPagina() } },4000))
+
+}
+var TempLoad=[]
+function PararCarregamento(){
+    document.getElementsByClassName("Loading")[0].style.visibility="collapse";
+    TempLoad.forEach(function(e){
+        clearTimeout(e);
+
+    })
+    TempLoad=[]
+}
+window.onkeydown=function(evt){
+ 
+    if(evt.key=="Enter"){
+
+
+        if(document.getElementsByClassName("MenuCriar")[0].style.visibility=="visible"){
+            CriarProdutoSistema();
+        }
+        
+
+        
+    }
+    
+  if(evt.key=="Escape"){
+        if(document.getElementsByClassName("Notificacao")[0].style.visibility=="visible"){
+            FecharNotificacao();
+        }
+    
+
+        else if(document.getElementsByClassName("MenuCriar")[0].style.visibility=="visible"){
+            CancelarCriar()
+        }
+    
+  }
+}
+
+</script>
+
+
+
+<div class="MenuEditar">
+  <div><div><div></div><div>
+  Editar Produto</div><div><button onclick="CancelarEditar()">Fechar</button></div>
+</div>
+<div><div>Nome:</div> <div>
+    <input type="text"></div>
+    </div>
+    <div><div>
+      Preço:
+    </div><div><input type="number" step="0.1" min=0></div>
+    </div><div><div></div><div>
+    <button onclick="EditarProdutoSistema()">Editar</button><button onclick="CancelarEditar()">Cancelar</button><button onclick="ExcluirProduto()">Excluir</button></div>
+  </div>
+</div>
+</div>
+
+<div class="MenuCriar">
+  <div><div><div></div><div>
+  Novo Produto</div><div>   <button onclick="CancelarCriar()">Fechar</button></div>
+</div>
+<div><div>Nome:</div> <div>
+    <input type="text"></div>
+    </div>
+    <div><div>
+      Preço:
+    </div><div><input type="number" step="0.1" min=0></div>
+    </div><div><div>
+    <button onclick="CriarProdutoSistema()">Criar</button><button onclick="CancelarCriar()">Cancelar</button></div>
+  </div>
+</div>
+</div>
+
+<div class="VerProdutos">
+  <div><div><div></div><div>Produtos do Pedido</div><div><button onclick="FecharVerProdutos()">Fechar</button></div></div>
+    <div><div>Id</div><div>Nome</div><div>Quantidade</div></div>
+    <div class="ListaProdutos">
+
+
+</div>
+
+
+</div>
+  
+  
+</div>
+
+
+
+</div>
+</div>
+<div class="Notificacao">
+  <div><div class="Texto">
+    </div>
+    <div>
+    <button onclick="FecharNotificacao()">Ok</button></div>
+  </div>
+</div>
+    <div class="Loading">
+        <div>Carregando</div>
+    </div>
+
+    </body>

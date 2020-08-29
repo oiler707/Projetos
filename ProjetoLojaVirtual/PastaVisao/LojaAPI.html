@@ -1,0 +1,843 @@
+<html>
+
+<head>
+
+<style>
+
+:root{
+    --blue:#bccff5;
+    --gray:#c7c7c7;
+    --blueActive:#3431b9;
+}
+
+.Centralizador{
+        text-align: -webkit-center;
+    
+}
+.Centralizador > :nth-child(1){
+     background: var(--blue);
+}
+.Centralizador > :nth-child(3){
+     background: var(--blue);
+}
+
+.Titulo{
+text-align: center;
+  display: flex;
+    
+   border: 2px solid var(--blue);
+     border-top: 1px solid var(--blue);
+    font-family: sans-serif;
+    font-size: 17px;
+  
+}
+.Titulo div{
+
+
+width: -webkit-fill-available;
+    color: white;
+}
+
+.TituloVersao{
+    width: 400px;
+    padding: 10px 20px;
+}
+.Versao{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    width: fit-content;
+        display: grid;  
+    
+}
+.Modulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloModulos{
+    min-width: 400px;
+    padding: 10px 20px;
+        margin: 16% 0%;
+}
+.Capitulos{
+text-align: center;
+   
+    padding: 10px 20px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 17px;
+    
+        display: grid;  
+    width: fit-content;
+}
+.TituloCapitulos{
+    min-width: 400px;
+    padding: 10px 20px;
+}
+
+
+.Enfileirado{
+
+       
+          display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+      
+   
+}
+.Enfileirado div{
+text-align: center;
+   
+    color: black;
+    
+    
+    font-family: sans-serif;
+    font-size: 18px;
+    width: -webkit-fill-available;
+        display: grid;  
+        align-items: baseline;
+        background: var(--blue)
+       border:0px solid;
+       align-content:center;
+        min-height: 40px;
+}
+.Enfileirado div:hover{
+   background: var(--blueActive); 
+cursor: pointer;color: white;
+
+ border:0px solid;
+}
+
+body{
+    margin: 0px;
+}
+.CorpoSite{  
+
+  height: calc(100% - 73px);
+display: flex;
+}
+.Tabelado .NovoPedido{
+   
+    visibility: visible;
+    display: inline-grid;
+    text-align: -webkit-center;
+    align-self: center;
+    height: -webkit-fill-available;
+    max-height: 50%;
+    border: 2px solid white;
+
+
+text-align: -webkit-center;
+
+
+border: 2px solid white;
+
+display: inline-grid;
+align-self: center;
+overflow: auto;
+height: -webkit-fill-available;
+
+}
+  .PosicionadoDireita{
+text-align: right;
+align-self: center;
+      
+text-align: right;
+    font-size: 15px;
+        margin-right: 10px;
+    font-family: sans-serif;
+}
+.CorpoSite .ListaProdutos{
+
+
+
+
+
+
+
+
+
+text-align: -webkit-center;
+
+
+border: 2px solid white;
+
+display: inline-grid;
+align-self: center;
+overflow: auto;
+height: -webkit-fill-available;
+}
+  
+  .CorpoSite div{
+    
+        text-align: -webkit-center;
+
+    
+        padding: 5px 10px;
+        border: 0px solid var(--blue);
+        font-family: sans-serif;
+        font-size: 17px;
+      
+    width: 50%;
+  }
+.CorpoSite .Tabelado{
+      
+           display: block;
+
+border: 0px solid white;
+padding-top: 0px;   
+}
+
+.Tabelado div{
+    width: -webkit-fill-available;
+    display: inline-grid;
+    
+
+font-size: 17px;
+    font-family: sans-serif;
+}
+
+.ListaProdutos div{
+grid-template-columns: repeat(3,1fr);
+grid-template-areas: "a b c";
+display: grid;
+width: auto;
+    
+    padding: 0px;
+    border: 0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    text-align: initial;
+}
+
+.ListaProdutos div div{
+    box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+ display: inline-flex;
+     align-self: center;
+}
+.ListaProdutos div button{
+border: 1px solid var(--gray); font-size: 17px;
+    width: fit-content;
+        align-self: center;
+        height: 35px;
+        border-radius: 4px;
+         margin: 5px 0px;
+}
+.ListaProdutos div button:hover{
+ cursor: pointer;
+    background: var(--blueActive);
+    color:white;
+    font-size: 17px;
+border: 1px solid var(--gray);    width: fit-content;
+}
+
+.ListaProdutos div button:focus{   
+        outline: none;
+
+}
+
+
+
+
+
+
+
+
+.Tabelado .ListaPedido{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+  background: var(--blue);
+
+
+grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "a b c";
+    display: grid;
+    width: auto;
+  
+    padding: 0px;
+    border: 0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    text-align: initial;
+}
+
+.HistoricoPedidos button{
+    align-self: center;
+    border: 1px solid var(--gray);
+    margin: 5px 0px;
+    height: auto;
+    border-radius: 4px;
+    min-height: 35px;
+    font-size: 17px;
+    font-family: sans-serif;
+     min-width: 40px;
+}
+.HistoricoPedidos button:focus{
+    outline: none;  
+}
+
+.HistoricoPedidos button:hover{
+
+        cursor: pointer;
+    background: var(--blueActive);
+    color: white;
+   
+    border: 1px solid var(--gray);
+    width: fit-content;
+    outline: none;
+}
+.Tabelado .ListaPedidoUltimo{
+     height: fit-content;
+    width: fit-content;
+    display: flex;
+  background: var(--blue);
+
+  grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "a b c";
+    display: grid;
+    width: auto;
+   
+    padding: 0px;
+    border: 0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    text-align: initial;
+}
+.ListaPedido div{
+    font-size: 17px;
+    font-family: sans-serif;
+        box-shadow: 0 0 0px black;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-self: center;
+}
+.ListaPedido input{
+    height: 35px;
+    font-size: 17px;
+        border: 1px solid var(--gray);
+}
+.ListaPedido input:focus{
+    outline: none;
+}
+.ListaPedidoUltimo div{
+      box-shadow: 0 0 0px black;
+    padding: 0px;
+    border: 0px;
+
+    display: inline-flex;
+    align-self: center;
+}
+.ListaPedido:nth-last-child(2) div:nth-child(1){
+     padding-left: 12.5px;
+}
+.ListaPedidoUltimo div button{
+    align-self: center;
+  border-radius: 4px;
+    border: 1px solid var(--gray);
+        margin: 5px 12.5px;
+        height: auto;
+    min-height: 35px;
+}
+
+.NovoPedido{
+    height: 45%;
+        overflow: auto;
+        visibility: collapse;
+        padding: 0px;
+        border: 0px;
+
+}
+.HistoricoPedidos{
+
+    align-self: center;
+    overflow: auto;
+    max-height: 45%;
+    height: -webkit-fill-available;
+
+}
+.HistoricoPedidos div{
+     align-items: center;
+
+height: auto;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "a b c";
+     display: inline-grid;
+    width: auto;
+    padding: 0px;
+    border: 0px;
+    background: var(--blue);
+    box-shadow: 0 0 20px black;
+    text-align: initial;
+}
+.HistoricoPedidos div div{
+    box-shadow: 0 0 0px black;
+        padding: 5px 10px;
+        display: inline-flex;
+}
+
+
+.ListaPedidoUltimo .EspacoMaior{
+text-align: -webkit-right;
+}
+.ListaPedidoUltimo button{
+     align-self: center;
+    height: auto;
+    min-height: 35px;
+    font-size: 17px;
+    border-radius: 4px;
+    border: 1px solid var(--gray);
+    min-width: 40px;
+  
+}
+.ListaPedidoUltimo button:hover{
+    cursor: pointer;
+    background: var(--blueActive);
+    color: white;
+    font-size: 17px;
+    border: 1px solid var(--gray);
+    width: fit-content;
+    outline: none;
+}
+.ListaPedidoUltimo button:focus{
+    outline: none;
+}
+.Centralizador .Centralizador .Titulo{
+    height: 27px;
+}
+.Loading{
+        width: 100%;
+    height: 100%;
+    position: fixed;
+    display: grid;
+    top: 0;
+    background: #43434394;
+    z-index: 100;
+    grid-template-areas:
+        ".a."
+        ".a.";
+    justify-content: center;
+    align-items: center;
+    cursor: progress;
+    visibility: collapse;
+}
+.Loading div{
+    grid-area: a;
+    background: var(--blueActive);
+    text-align: center;
+    padding: 10px 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 4px;
+}
+</style>
+
+</head>
+
+    <body>
+<div class="Centralizador">
+    <div class="Titulo">
+      <div>
+      </div>
+      <div class="Enfileirado">
+<div onclick="MostarProdutos()">Produtos</div>
+<div onclick="CriarNovoPedido()">Novo Pedido</div>
+<div onclick="MostrarHistorico()">Histórico Pedidos</div>
+<div onclick="Desconectar()">Desconectar</div>
+
+      </div>
+    </div>
+<div class="CorpoSite">
+    <div  class="ListaProdutos">
+       
+    </div>
+
+    <div class="Tabelado">
+        <div class="NovoPedido">
+
+
+        </div>
+        <div class="HistoricoPedidos">
+        </div>
+        
+    </div>
+</div>
+
+    <div>
+        <div class="Centralizador">
+    <div class="Titulo">
+        <div class="PosicionadoDireita">
+            Loja Virtual 2020
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+    <div class="Loading">
+        <div>Carregando</div>
+    </div>
+    </body>
+
+<script>
+var Produtos=[]
+var Historico=[]
+
+
+function MostarProdutos(){
+        CarregarPagina();
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutosAtivos.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+        
+        
+        ProdutosClientes.onmessage= function(e){
+            JSON.parse(e.data["RetornoSistema"])
+               
+            var ContentProdutos='<div><div>Produto</div><div>Preço</div><div style="color:var(--blue);background:var(--blue)">'+"."+'</div></div>'
+
+            JSON.parse(e.data["RetornoSistema"]).forEach(function(e){
+
+               ContentProdutos+= '<div><div>'+e["Nome"]+'</div><div>'+"R$ : "+e["Preco"].toFixed(2)+'</div>'+
+               '<button onclick="AdicionarNovoCarrinho('+e['Id']+')">Adicionar</button>'+ '</div>'
+
+            })
+
+          document.getElementsByClassName("ListaProdutos")[0].innerHTML =ContentProdutos;
+          PararCarregamento();
+        }
+
+}
+
+function CapturaProdutos(){
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutoClientes.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+        ProdutosClientes.onmessage= function(e){
+            Produtos=JSON.parse(e.data["RetornoSistema"])
+
+          }
+}
+
+function AdicionarNovoCarrinho(Id){
+
+    if(document.getElementsByClassName("NovoPedido")[0].innerText==""){
+        CriarNovoPedido();
+    }
+
+    if(Array.from(document.getElementsByClassName("ListaPedido")).filter(x=>x.id==Id).length==0){
+       
+        document.getElementsByClassName("ListaPedido")[0].outerHTML+='<div class="ListaPedido" id='+Id+'><div><input value=1 min="0" max="15" onchange="AtualizarPreco()" type="number"></div><div>'+Produtos.filter(z=>z.Id==Id)[0]["Nome"]+'</div><div>'+Produtos.filter(z=>z.Id==Id)[0]["Preco"].toFixed(2)+'</div></div>'
+    }
+
+/*  Array.from(document.getElementsByClassName("ListaPedido")).forEach(function(e){
+
+
+    })*/
+setTimeout(function(){ AtualizarPreco();MostrarPedido() }, 4);
+
+}
+
+function AtualizarPreco(){
+
+Total=0;
+Quantidade=0
+Array.from(document.getElementsByClassName("ListaPedido")).filter(x=>x.id!="").forEach(function(e){
+if(e.getElementsByTagName("input")[0].value>15){
+    e.getElementsByTagName("input")[0].value=15;
+}
+if(e.getElementsByTagName("input")[0].value<0){
+    e.getElementsByTagName("input")[0].value=0;
+}
+Quantidade+=parseInt(e.getElementsByTagName("input")[0].value);
+Total+=Produtos.filter(z=>z.Id==e.id)[0]["Preco"]*e.getElementsByTagName("input")[0].value;
+
+e.getElementsByTagName("div")[2].innerHTML=(Produtos.filter(z=>z.Id==e.id)[0]["Preco"]*e.getElementsByTagName("input")[0].value).toFixed(2)
+})
+
+Array.from(document.getElementsByClassName("ListaPedido")).slice(-1)[0].getElementsByTagName("div")[2].innerHTML=Total.toFixed(2);
+Array.from(document.getElementsByClassName("ListaPedido")).slice(-1)[0].getElementsByTagName("div")[0].innerHTML=Quantidade;
+
+}
+function MostrarPedido(){
+
+    document.getElementsByClassName("NovoPedido")[0].style.visibility="visible";
+}
+
+
+
+
+function CriarNovoPedido(){
+    
+    
+    var TempPedido=""
+
+    if(this.event.target.innerHTML=="Limpar"){
+
+
+        TempPedido = '<div class="ListaPedido"> <div>Quantidade </div> <div>       Pedidos </div> <div>       Preço </div> </div> <div class="ListaPedido"> <div>0</div> <div>       Total : </div> <div>0.00</div> </div> <div class="ListaPedidoUltimo"><div></div><div><button onclick="CriarNovoPedido()">Limpar</button></div>'+this.event.target.parentElement.nextElementSibling.outerHTML+"</div>"
+      
+    }
+    else{
+TempPedido= '<div class="ListaPedido"> <div>Quantidade </div> <div>       Pedidos </div> <div>       Preço </div> </div> <div class="ListaPedido"> <div>0</div> <div>       Total : </div> <div>0.00</div> </div> <div class="ListaPedidoUltimo"><div></div><div><button onclick="CriarNovoPedido()">Limpar</button></div> <div class="EspacoMaior"><button onclick="AdicionarCarrinho()">Adicionar no Carrinho</button></div> </div>';
+
+    }
+    
+    
+    document.getElementsByClassName("NovoPedido")[0].innerHTML=TempPedido;    
+
+
+    AtualizarPreco();
+    if(document.getElementsByClassName("ListaProdutos")[0].innerText==""){
+           MostarProdutos();
+    }
+ 
+    Array.from(document.getElementsByClassName("ListaPedido")).filter(x=>x.id!="").forEach(function(e){
+        e.remove();
+        setTimeout(function(){ AtualizarPreco() }, 4);
+
+    });
+/*    
+    document.getElementsByClassName("ListaPedidoUltimo")[0].getElementsByClassName("EspacoMaior")[0].firstElementChild.setAttribute("onclick","AdicionarCarrinho()");
+
+    document.getElementsByClassName("ListaPedidoUltimo")[0].getElementsByClassName("EspacoMaior")[0].firstElementChild.innerHTML="Adicionar no Carrinho";
+
+  */  
+
+    MostrarPedido();
+}
+
+
+function MostrarHistorico(){
+CarregarPagina();
+        var HistoricoCliente = new Worker("../../WorkerExterno/HistoricoCliente.js");
+        
+        HistoricoCliente.postMessage({
+              
+
+        })
+        
+        
+        HistoricoCliente.onmessage= function(e){
+            
+            Historico=JSON.parse(e.data["RetornoSistema"])
+            
+            var ContentProdutos='<div><div>Cliente</div><div>Data</div><div>Status</div><div>Total</div><div>Editar</div></div>'
+
+            JSON.parse(e.data["RetornoSistema"]).forEach(function(e){
+                var Editavel=""
+                var Excluir=""
+                if(e['Status']=="Pendente"){
+                    Editavel    ="<button onclick='EditarPedido("+e['Id']+")'>Editar</button>"
+                    Excluir    ="<button onclick='RemoverPedido("+e['Id']+")'>x</button>"
+                }
+
+
+               ContentProdutos+= '<div><div>'+e["CodigoCliente"]+'</div><div>'+new Date(e["Data"]).toLocaleString("pt-BR").slice(0,-3).replace(" "," às ")+"h"+'</div>'+
+               '<div>'+e['Status']+'</div>'+ '<div> R$ : '+e['Total'].toFixed(2)+'</div>'+'<div>'+Editavel+ Excluir+'</div>'+'</div>'
+
+            })
+
+          document.getElementsByClassName("HistoricoPedidos")[0].innerHTML =ContentProdutos;
+          PararCarregamento();
+        }
+
+
+
+}
+
+function RemoverPedido(Id){
+        CarregarPagina();
+        var RemoverPedido = new Worker("../../WorkerExterno/RemoverPedido.js");
+        
+        RemoverPedido.postMessage({
+              
+            "Id":Id,
+        })
+         RemoverPedido.onmessage= function(e){
+            
+            
+                MostrarHistorico();
+                PararCarregamento();
+
+        }
+
+}
+CapturaProdutos();
+function EditarPedido(Id){
+    
+   CriarNovoPedido()
+   Historico.filter(x=>x.Id==Id)[0].Produtos;
+   Historico.filter(x=>x.Id==Id)[0].Total;
+
+Historico.filter(x=>x.Id==Id)[0].Produtos.forEach(function(e){
+console.log(e)
+if(Produtos.filter(z=>z.Id==e.Id)[0]["Ativo"]==true){
+   document.getElementsByClassName("ListaPedido")[0].outerHTML+='<div class="ListaPedido" id='+e.Id+'><div><input value='+e.Quantidade+' min="0" max="15" onchange="AtualizarPreco()" type="number"></div><div>'+Produtos.filter(z=>z.Id==e.Id)[0]["Nome"]+'</div><div>'+Produtos.filter(z=>z.Id==e.Id)[0]["Preco"].toFixed(2)+'</div></div>'
+}
+else{
+document.getElementsByClassName("ListaPedido")[0].outerHTML+='<div class="ListaPedido" id='+e.Id+'><div><input value=0 min="0" max="0" onchange="AtualizarPreco()" type="number"></div><div>'+Produtos.filter(z=>z.Id==e.Id)[0]["Nome"]+' (Inativo)</div><div>'+Produtos.filter(z=>z.Id==e.Id)[0]["Preco"].toFixed(2)+'</div></div>'
+
+}
+
+})
+
+document.getElementsByClassName("ListaPedidoUltimo")[0].getElementsByClassName("EspacoMaior")[0].firstElementChild.setAttribute("onclick","EditarPedidoHistorico("+Id+")");
+
+document.getElementsByClassName("ListaPedidoUltimo")[0].getElementsByClassName("EspacoMaior")[0].firstElementChild.innerHTML="Editar Pedido";
+
+setTimeout(function(){ AtualizarPreco();
+
+Array.from(document.getElementsByClassName("ListaPedido")).slice(-1)[0].getElementsByTagName("div")[2].innerHTML=Historico.filter(x=>x.Id==Id)[0].Total.toFixed(2);
+''
+
+ }, 4);
+}
+
+function EditarPedidoHistorico(Id){
+    CarregarPagina();
+      var EditarPedidoHistorico = new Worker("../../WorkerExterno/EditarPedido.js");
+
+        var ProdutoEditarHistorico=[]
+        Array.from(document.getElementsByClassName("ListaPedido")).filter(x=>x.id!="").forEach(function(e){ 
+            console.log(e.getElementsByTagName("input")[0])
+
+            ProdutoEditarHistorico.push({"Quantidade":e.getElementsByTagName("input")[0].value,
+
+                "Id":e.id
+                })
+             })
+
+        Total= Array.from(document.getElementsByClassName("ListaPedido")).slice(-1)[0].getElementsByTagName("div")[2].innerHTML
+
+
+        EditarPedidoHistorico.postMessage({
+                "ProdutoEditarHistorico":ProdutoEditarHistorico,
+                "Total":Total,
+                "IdPedido":Id,
+        })
+         EditarPedidoHistorico.onmessage= function(e){
+            MostrarHistorico();
+            PararCarregamento();
+
+        }
+
+
+}
+
+function AdicionarCarrinho(){
+        CarregarPagina();
+        var AdicionarCarrinho = new Worker("../../WorkerExterno/AdicionarCarrinho.js");
+        var ProdutoAdicionarHistorico=[]
+        Array.from(document.getElementsByClassName("ListaPedido")).filter(x=>x.id!="").forEach(function(e){ 
+            console.log(e.getElementsByTagName("input")[0])
+
+            ProdutoAdicionarHistorico.push({"Quantidade":e.getElementsByTagName("input")[0].value,
+
+                "Id":e.id
+                })
+             })
+
+        Total= Array.from(document.getElementsByClassName("ListaPedido")).slice(-1)[0].getElementsByTagName("div")[2].innerHTML
+
+
+        AdicionarCarrinho.postMessage({
+                "ProdutoAdicionarHistorico":ProdutoAdicionarHistorico,
+                "Total":Total
+            
+        })
+         AdicionarCarrinho.onmessage= function(e){
+            console.log(e.data["RetornoSistema"]);
+            MostrarHistorico();
+            PararCarregamento();
+        }
+
+
+}
+function Desconectar(){
+  var Desconectar= new Worker("../../WorkerExterno/Desconectar.js");
+      Desconectar.postMessage({
+
+        })
+
+      Desconectar.onmessage= function(e){
+          if(e.data["RetornoSistema"]==true){
+
+            window.location.href="../../"
+          }
+       
+      }
+}
+function CapturaProdutos(){
+        var ProdutosClientes = new Worker("../../WorkerExterno/ProdutoClientes.js");
+        
+        ProdutosClientes.postMessage({
+              
+
+        })
+        ProdutosClientes.onmessage= function(e){
+            Produtos=JSON.parse(e.data["RetornoSistema"])
+
+          }
+}
+function CarregarPagina(){
+
+document.getElementsByClassName("Loading")[0].style.visibility="visible";
+
+
+
+document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML="Carregando"
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 1000))
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 2000))
+
+TempLoad.push(setTimeout(function(){document.getElementsByClassName("Loading")[0].getElementsByTagName("div")[0].innerHTML+="."  }, 3000))
+
+TempLoad.push(setTimeout(function(){if(document.getElementsByClassName("Loading")[0].style.visibility=="visible"){CarregarPagina() } },4000))
+
+}
+var TempLoad=[]
+function PararCarregamento(){
+    document.getElementsByClassName("Loading")[0].style.visibility="collapse";
+    TempLoad.forEach(function(e){
+        clearTimeout(e);
+
+    })
+    TempLoad=[]
+}
+
+window.onkeydown=function(evt){
+ 
+    if(evt.key=="Enter"){
+
+        document.getElementsByClassName("EspacoMaior")[0].getElementsByTagName("button")[0].click();
+    }
+    
+  if(evt.key=="Escape"){
+
+    document.getElementsByClassName("ListaPedidoUltimo")[0].getElementsByTagName("button")[0].click();
+  }
+}
+
+</script>
+
+</html>

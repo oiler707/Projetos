@@ -1,0 +1,197 @@
+
+<html>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script>
+var Usuarios=[]
+
+</script>
+
+<style>
+
+:root{
+	--blue:#bccff5;
+	--gray:#c7c7c7;
+	--blueActive:#3431b9;
+}
+
+.Centralizador{
+        text-align: -webkit-center;
+        margin: 10px;
+            margin: 11% 0%;
+}
+
+body{
+	background: var(--blue);
+}
+.Titulo{
+	    border-radius: 16px;
+box-shadow: 0px 0px 20px 4px #172256;
+text-align: center;
+  background: white;
+    padding: 10px 20px;
+     width: 270px;
+    font-family: sans-serif;
+    font-size: 20px;
+   
+}
+.Listado{
+	display: grid;
+	margin: 10px 0px;
+}
+.Listado input,a{
+
+margin: 10px 0px 0px 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+    
+}
+
+.Listado input{
+	 border: solid 1px var(--gray);
+	 border-radius: 4px;
+	 font-size: 15px;
+}
+
+
+.Listado input,a{
+margin: 10px 0px 0px 0px;
+    font-family: sans-serif;
+    
+	text-align: left;
+	color: black;
+	height: 27px;
+	    width: -webkit-fill-available;	
+}
+.Listado input:focus{
+	 outline: none; border: solid 1px black;
+}
+.Listado a:hover{
+
+    color: var(--blueActive);
+}
+.Listado a{
+	width: fit-content;
+}
+.Listado div{
+	width: -webkit-fill-available;
+    display: inline-flex;
+}
+  .Listado button{ height: 30px;
+  	margin-top: 9px;
+
+border-radius: 4px;
+border: 1px solid var(--gray);
+}
+.Listado button:hover{
+	cursor: pointer;
+	 background: var(--blue);
+}
+.Listado button:focus{ height: 30px;
+  	margin-top: 9px;
+  	background: var(--blue); border: solid 1px black;
+  	cursor: pointer;
+  	 outline: none;
+}
+
+.AcessoErro{
+text-align: center;
+      background: white;
+    padding: 10px 20px;
+   
+    font-family: sans-serif;
+    font-size: 15px;
+        width: 270px;
+        visibility: hidden;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px 4px #172256;
+}
+	</style>
+</head>
+<body>
+	
+	<div class="Centralizador">
+	<div class="AcessoErro">Senha ou/e usuário inválido(s)</div>
+<div class="Titulo">
+	Autenticação
+
+	<form>
+	<div class="Listado">
+
+	
+<input type="text" placeholder="Usuário">
+
+<div>
+<input type="password" placeholder="Senha"><button type="button" onclick="ModoSenha(this)"><i class="fa fa-eye"></i></button>
+<button type="button" onclick="EntrarSistema(this)">Entrar</button>
+</div>
+
+<a href="/ProjetoLojaVirtual/rits/CadastroCliente" value="Novo cliente">Novo cliente</a>
+</div>
+
+</div>
+</form>
+</div>
+</body>
+<script>
+function ModoSenha(element){
+	
+	if(element.parentElement.getElementsByTagName("input")[0].type=="password"){
+	element.parentElement.getElementsByTagName("input")[0].type="text";
+			
+			element.innerHTML='<i class="fa fa-eye-slash"></i>'
+	}
+	else{
+		element.parentElement.getElementsByTagName("input")[0].type="password";
+		element.innerHTML='<i class="fa fa-eye"></i>'
+	}
+
+	
+}
+
+
+function EntrarSistema(element){
+	console.log("AQUI")
+		var AutenticacaoSistema = new Worker("WorkerExterno/AutenticacaoSistema.js");
+		
+		AutenticacaoSistema.postMessage({
+			"Usuario":element.parentElement.parentElement.getElementsByTagName("input")[0].value,
+			"Senha":element.parentElement.parentElement.getElementsByTagName("input")[1].value,	
+
+		})
+		
+		AutenticacaoSistema.onmessage= function(e){
+			
+			if(e.data["RetornoSistema"]==true){
+
+				window.location.href="../ProjetoLojaVirtual/rits/LojaAPI";
+			}
+			else if(e.data["RetornoSistema"]=="admin"){
+
+				window.location.href="../ProjetoLojaVirtual/rits/AdminAPI";
+				
+			}
+			else{
+
+				document.getElementsByClassName("AcessoErro")[0].style.visibility="visible";
+			}
+		
+		}
+}
+
+
+window.onkeydown=function(evt){
+ 
+  if(evt.key=="Enter"){
+
+    EntrarSistema(document.getElementsByClassName("Listado")[0].getElementsByTagName("button")[1])
+  }
+	if(evt.key=="Escape"){
+		  document.getElementsByClassName("AcessoErro")[0].style.visibility="collapse";
+	}
+}
+
+
+</script>
+</html>
