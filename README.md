@@ -2,7 +2,7 @@ Bem vindo.
 
 Fazer download do LojaVirtual.exe e executá-lo
 
-Obs: Permitir acesso, pois o windons pode impedir
+Obs: Permitir acesso, pois o windows pode impedir
 
 Usuário e senha para administrador são respectivamente: 'admin' e 'admin'
 
