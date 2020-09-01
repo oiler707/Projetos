@@ -1,1 +1,0 @@
-[{"Id":10,"CodigoCliente":13557,"Data":"2020-08-05 23:27:42.000000","Status":"Entregue","Produtos":[{"Quantidade":1,"Id":2}],"Total":30},{"Id":20,"CodigoCliente":13557,"Data":"2020-08-06 03:36:31.000000","Status":"Pendente","Produtos":[{"Quantidade":1,"Id":82},{"Quantidade":1,"Id":72},{"Quantidade":1,"Id":62},{"Quantidade":1,"Id":52}],"Total":23}]
