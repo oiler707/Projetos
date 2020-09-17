@@ -1,8 +1,6 @@
 Bem vindo.
 
-Fazer download do LojaVirtual.exe e executá-lo
-
-Obs: Permitir acesso, pois o windows pode impedir
+Fazer download do LojaVirtual.zip e executálo com servidor php
 
 Usuário e senha para administrador são respectivamente: 'admin' e 'admin'
 
