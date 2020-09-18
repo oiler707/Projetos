@@ -12,6 +12,8 @@ código em suas respectivas pastas
 Projeto Loja Virtual
 ============================================================================
 
+adsfsd
+----------------------------------------------------------------------------
 administrador = usuário : 'admin' / senha : 'admin'                                                                                                                     
 cliente       = usuário : 'euler' / senha : 'porto'
 
