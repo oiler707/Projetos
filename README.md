@@ -1,16 +1,18 @@
-Bem vindo.
-
-Acesso para ver projetos em : http://github-oiler707-com.umbler.net/
-
-Usuário = umbler         
-Senha = testehospedagem
-
-Código em suas respectivas pastas
+Bem Vindo.
 ============================================================================
 
-Projeto Loja Virtual
+acesso para ver projetos em : http://github-oiler707-com.umbler.net/
 
-Administrador = usuário : 'admin' / senha : 'admin'                                                                                                                     
-Cliente       = usuário : 'euler' / senha : 'porto'
+usuário = umbler         
+senha = testehospedagem
+
+código em suas respectivas pastas
+
+
+Projeto Loja Virtual
+============================================================================
+
+administrador = usuário : 'admin' / senha : 'admin'                                                                                                                     
+cliente       = usuário : 'euler' / senha : 'porto'
 
 
