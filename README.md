@@ -9,7 +9,7 @@ Senha = testehospedagem
 
 Projeto Loja Virtual
 
-Administrador = usuário : 'admin' / senha : 'admin'
+Administrador = usuário : 'admin' / senha : 'admin'                                                                                                                     
 Cliente       = usuário : 'euler' / senha : 'porto'
 
 
