@@ -14,12 +14,12 @@ Projeto Loja Virtual
 
 administrador
 ----------------------------------------------------------------------------
-usuário : 'admin'
+usuário : 'admin'               
 senha   : 'admin'       
 
 cliente
 ----------------------------------------------------------------------------
-usuário : 'euler'
+usuário : 'euler'                             
 senha   : 'porto'
 
 
