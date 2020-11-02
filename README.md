@@ -8,18 +8,12 @@ senha   : testehospedagem
 
 código em suas respectivas pastas
 
-
 Projeto Loja Virtual
 ============================================================================
-
-administrador
+Simulador de compra e venda de produtos em uma lanchonete virtual. Neste projeto, Seu email cadastrado receberá notificações de ações na loja
 ----------------------------------------------------------------------------
-usuário : 'admin'               
-senha   : 'admin'       
 
-cliente
 ----------------------------------------------------------------------------
-usuário : 'euler'                             
-senha   : 'porto'
+
 
 
