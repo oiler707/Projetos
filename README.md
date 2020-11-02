@@ -11,9 +11,7 @@ código em suas respectivas pastas
 Projeto Loja Virtual
 ============================================================================
 Simulador de compra e venda de produtos em uma lanchonete virtual. Neste projeto, Seu email cadastrado receberá notificações de ações na loja
-----------------------------------------------------------------------------
 
-----------------------------------------------------------------------------
 
 
 
