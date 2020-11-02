@@ -1,0 +1,1322 @@
+<html>
+
+<head>
+<script>
+var Cabecalho=["DadosCad","Contrain","DadosCli","EscalDor"];
+var Indice=0;
+var Formulario={
+	
+
+}
+
+
+</script>
+
+<style>
+body{margin: 0px;
+
+}
+.Cabecalho{
+background: #e8e6e6;
+width:-webkit-fill-available;;
+
+display: grid;
+grid-template-areas:"a";
+    
+     position: fixed;
+    z-index: 10;
+
+    background: #8ed0c2;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+.Cabecalho button{
+	    width: fit-content;
+	    font-size: 20px;
+	    padding: 8px 40px;
+	    border: 2px solid #009ca7;
+	    background : #e8e6e6;
+	    border-radius: 40px;
+	    color:#009ca7;
+	    font-weight: bold;
+	        font-family: revert;
+
+}
+.Cabecalho div{
+	font-family: monospace;
+	font-weight: 900;
+	word-spacing: -4px;
+	text-align: center;
+	font-size: 15px;
+	padding: 10px;
+}
+.Cabecalho .Subtitulo{
+background:  white;
+
+display: grid;
+background: #89dac5;
+justify-content:center;
+grid-template-areas:"a b c";
+grid-template-columns:25% auto 25%;
+}
+.Cabecalho .Subtitulo img:nth-child(1){
+grid-area:a;
+width: 40px;
+justify-self:end;
+}
+.Cabecalho .Subtitulo img:nth-child(1):hover{
+	cursor: pointer;
+	content: url('/ProjetoFormulario/IconesExternos/VoltarSelecionado.png');
+}
+.Cabecalho .Subtitulo img:nth-child(2){
+	grid-area:b;
+}
+
+
+.Cabecalho button:hover{
+background: #00eafa;	
+cursor: pointer;
+}
+.Cabecalho button:focus{
+ outline: none; 	
+}
+.Cabecalho img{
+	
+	padding: 0px 10px;
+	  align-self:center;
+	  width: 300px;
+}
+
+
+.Menu{
+	    display: inline-grid;
+    width: 10%;
+    padding: 0px 20px;
+        position: fixed;
+        margin-top: 1182px;
+        z-index: 10;
+}
+.Menu button{
+	text-align: left;
+
+	    font-size: 18px;
+	    padding: 15px 20px;
+	    border: 0px;
+	   
+	    background : #00eafa;
+	    border-radius: 20px;
+	    color:white;
+	    margin-top: 4px;
+	    font-weight: bold;
+	        font-family: revert;
+}
+.Menu button:focus{
+	outline: none;
+	background: rgba(169, 248, 253, 1);
+}
+.Menu button:hover{
+	background: rgba(0, 156, 167, 1);
+	cursor: pointer;
+}
+.Corpo{
+background: #89dac5;
+  
+    width: -webkit-fill-available;
+    
+    position: absolute;
+    z-index: 1;
+    height: -webkit-fill-available;
+}
+.Apresentacao{
+	  height: 750px;
+	   
+	    display: grid;
+	    justify-content:center;
+	    align-items:center;
+}
+.Apresentacao.Integrador{
+	 background: #202020;
+}
+.Apresentacao.Cliente{
+	 background: #a9f8fd;
+}
+.Apresentacao.Distribuidor{
+	 background: #2134b0;
+}
+.Apresentacao.Bancos{
+	 background: #ffebaa;
+}
+.Apresentacao.QuemSomos{
+	 background: #ffaaff;
+}
+.Apresentacao.Midias{
+	 background: #bd1515;
+}
+.Apresentacao.Login{
+	 background: #202020;
+}
+
+.Apresentacao img{
+
+}
+.Titulo{
+	font-size: 20px;
+	color:#18C1C0;
+	    letter-spacing: 2px;
+	text-align: center;
+	padding: 15px;
+	font-weight: bold;	
+	font-family: sans-serif;
+	
+}
+.Subtitulo div{
+	text-align: left;
+	align-self:center;
+
+}
+.Subtitulo input{
+	    background: #fff url(IconesExternos/search.jpg);
+	    background-repeat: no-repeat;
+	    
+
+    background-position: left;
+	    background-position-x: 10px;
+    padding: 5px;
+    padding-left: 35px;
+    font-size: 11px;
+    width: 200px;
+}
+.Subtitulo img:hover{
+	cursor: pointer;
+
+}
+.Cabecalho .CampoLogin{
+	display: grid;
+    grid-template-areas: "a b";
+    padding: 0px;	
+}
+.CampoLogin:hover{
+background: #ffaaff;
+cursor: pointer;
+
+}
+.CampoLogin img{
+	    width: auto;
+	padding: 0px;
+
+}
+.Formulario{
+justify-self: center;
+background: blue;
+border-radius:16px;
+width: 400px;
+grid-area:b;
+background: #4c5654;
+    padding: 40px;
+    color: white;
+    text-align: center;
+        font-family: sans-serif;
+    font-size: 18px;
+letter-spacing: 1px;
+    word-spacing: 4px;
+}
+.Formulario .Cabecalho2{
+padding-bottom: 40px;
+	text-align: center;
+	font-size: 22px;
+display: grid;
+}
+.Formulario .Legenda{display: grid;
+    grid-template: "a b c d e";
+    overflow-x: scroll;
+    overflow: hidden;
+        grid-template-columns: max-content max-content max-content max-content max-content;
+}
+
+    .Formulario .Legenda label{
+
+    	padding:2px 8px;
+    	    width: max-content;
+
+    }
+    .Formulario .Legenda .Selecionado{
+    	background: green;
+
+    }
+ .Formulario .Legenda div{
+ 	display: grid;
+ }
+.Formulario div{
+	
+	padding-bottom: 20px;
+	text-align: left;
+	font-size: 14px;
+
+}
+.Formulario .CorpoFormulario{
+	display: block;
+}
+.Formulario .Legenda div{
+	width: max-content;
+}
+.Formulario input,select{
+	    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    padding:5px;
+    margin-top: 5px;
+    width: 100%;
+}
+.Formulario option,select{
+	font-size: 16px;
+}
+.CorpoCadastroTopo{
+background: green;
+}
+
+.CorpoCadastro{
+	padding-top: 140px;
+	background: #89dac5;
+	 
+	 background-repeat: no-repeat;
+    background-size: contain;
+        
+        display: grid;
+    background-position: center;
+    grid-template-areas: "a a a"
+               "d b e"
+               "c c c";
+
+    grid-template-columns: 25% auto 25%;
+    grid-template-rows:10px auto 40px;
+}
+.Corpo img{
+	width: 100%;
+	background:rgba(0, 156, 167, 1);
+	padding-top: 120px;
+	transition: 0.5s linear;
+}
+.Rodape{
+	font-family: monospace;
+	font-weight: 900;
+	word-spacing: -4px;
+	text-align: right;
+	font-size: 12px;
+	padding: 10px;
+	color: white;
+	background: #89dac5;
+
+}
+.Formulario .Alinhada{
+	display: grid;
+	padding-top:20px;
+	grid-template-areas: "a b c";
+
+    grid-template-columns: 25% auto 25%;
+    
+}
+.Alinhada button{
+	font-family: sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-weight: bold;
+padding: 10px 8px;
+}.Alinhada button:hover{
+	cursor: pointer;
+	background:#b7b7b7 ;
+	
+
+}
+.Alinhada button:nth-child(1){
+
+
+grid-area:a;
+}
+.Alinhada button:nth-child(2){
+
+grid-area:c;
+}
+.Alinhada button:nth-child(3){
+
+grid-area:c;
+}
+.Formulario  .LadoLado{
+
+
+	display: grid;
+	grid-template-areas: "a b"
+               "c d";
+    grid-template-columns: 50% 50%;
+
+}
+.Formulario .LadoLadoTelefone{
+
+
+	display: grid;
+	grid-template-areas: "a a"
+               "b c"
+               "d e";
+    grid-template-columns: 30% 70%;
+
+}
+.Formulario .LadoLadoTelefone label:nth-child(1){
+grid-area:a;
+padding: 0px 0px 10px 0px;
+}
+.Formulario .LadoLadoTelefone input{
+width: auto;
+}
+
+.Formulario .LadoLado input{
+	width: auto;
+	
+}
+.Formulario .LadoLado .Marcado {
+background: rgb(255 190 150);
+}
+
+.Formulario .LadoLado input:nth-child(3),.Formulario .LadoLado select:nth-child(3){
+	grid-area:c;
+	margin-right: 10px;
+}
+
+.Formulario .LadoLado input:nth-child(4){
+	grid-area:d;
+	
+}
+.Formulario .LadoLadoTelefone input:nth-child(4){
+	margin-right: 10px;
+}
+.Formulario .ComoNosConheceu{
+
+
+	display: grid;
+	grid-template-areas: "a a a"
+               "b c d"
+               "e f g"
+               "h h h";
+
+}
+.Formulario .ComoNosConheceu div,.Formulario .PerguntaSimples div,.Formulario .SintomasCronicos div,.Formulario .FrequenciaExercicio div{
+	display: inline;
+}
+
+.Formulario .ComoNosConheceu input,.Formulario .PerguntaSimples input,.Formulario .SintomasCronicos input, .Formulario .FrequenciaExercicio input{
+	width: fit-content;
+	transform: scale(1.5);
+margin: 0px 10px 0px 0px;
+}
+.Formulario .PerguntaSimples{
+	display: grid;
+	grid-template-areas: "a a"
+               "b c";
+               grid-template-columns: 40% 60%;
+}
+.Formulario .PerguntaSimples label:nth-child(1){
+
+grid-area:a;
+padding-bottom: 20px;
+}
+.Formulario .Observacao{
+	text-align: right;
+
+}
+.Formulario .PerguntaSimples div:nth-child(2){
+
+grid-area:b;
+
+}
+.Formulario .PerguntaSimples div:nth-child(3){
+
+grid-area:c;
+
+}
+
+
+.Formulario .ComoNosConheceu label:nth-child(1){
+
+grid-area:a;
+padding-bottom: 20px;
+}
+
+.Formulario .ComoNosConheceu div:nth-child(2){
+
+grid-area:b;
+
+}
+.Formulario .ComoNosConheceu div:nth-child(3){
+
+grid-area:c;
+
+}
+.Formulario .ComoNosConheceu div:nth-child(4){
+
+grid-area:d;
+}
+.Formulario .ComoNosConheceu div:nth-child(5){
+
+grid-area:e;
+}
+
+.Formulario .ComoNosConheceu div:nth-child(6){
+
+grid-area:f;
+}
+.Formulario .ComoNosConheceu div:nth-child(7){
+
+grid-area:g;
+}
+.Formulario .ComoNosConheceu div:nth-child(8){
+
+grid-area:h;
+    padding-bottom: 0px;
+}
+
+.Formulario .ComoNosConheceu div:nth-child(8) input[type=text]{
+
+
+		transform:scale(1);
+		margin-left: 10px;
+
+}
+
+.Formulario .SintomasCronicos{
+	display: grid;
+	grid-template-areas: "a a a"
+               "b . g" 
+               "k k d"
+               "c . f"
+               "j j i"
+               
+               "m m e"
+               "l l h"
+               "n n n";
+
+} 
+
+.Formulario .SintomasCronicos label:nth-child(1){
+
+grid-area:a;
+padding-bottom: 20px;
+}
+
+.Formulario .SintomasCronicos div:nth-child(2){
+
+grid-area:b;
+
+}
+.Formulario .SintomasCronicos div:nth-child(3){
+
+grid-area:c;
+
+}
+.Formulario .SintomasCronicos div:nth-child(4){
+
+grid-area:d;
+}
+.Formulario .SintomasCronicos div:nth-child(5){
+
+grid-area:e;
+}
+
+.Formulario .SintomasCronicos div:nth-child(6){
+
+grid-area:f;
+}
+.Formulario .SintomasCronicos div:nth-child(7){
+
+grid-area:g;
+}
+.Formulario .SintomasCronicos div:nth-child(8){
+
+grid-area:h;
+}
+
+.Formulario .SintomasCronicos div:nth-child(9){
+
+grid-area:i;
+}
+
+.Formulario .SintomasCronicos div:nth-child(10){
+
+grid-area:j;
+}
+
+.Formulario .SintomasCronicos div:nth-child(11){
+
+grid-area:k;
+}
+
+.Formulario .SintomasCronicos div:nth-child(12){
+
+grid-area:l;
+}
+
+.Formulario .SintomasCronicos div:nth-child(13){
+
+grid-area:m;
+}
+
+
+.Formulario .SintomasCronicos div:nth-child(14){
+
+grid-area:n;
+    padding-bottom: 0px;
+}
+
+.Formulario .SintomasCronicos div:nth-child(14) input[type=text]{
+
+
+		transform:scale(1);
+		margin-left: 10px;
+
+}
+
+
+
+.Formulario .LadoLado select{
+
+width: auto;
+}
+.Formulario textarea{
+	
+	    resize: vertical;
+		font-size: 18px;
+	    font-family: sans-serif;
+	    letter-spacing: 1px;
+	    word-spacing: 4px;
+	    padding: 5px;
+	    margin-top: 5px;
+	    width: 100%;
+	    height: 100px;
+}
+mark{
+    background-color:rgb(255 190 150);
+
+}
+
+
+.EscalaDor{
+	background-image: url('IconesExternos/EscalaDor.png');
+    background-repeat: round;
+    display: grid;
+    grid-template:"z z z"
+    			  "a a a"
+    			  "b c d";
+    
+}
+.EscalaDor label:nth-child(1){
+	 grid-area: z;
+}
+.EscalaDor input{
+	margin-top: 30px;grid-area: a;
+}
+.EscalaDor label:nth-child(3){
+	 grid-area: b;
+    text-align: left;
+    margin-left: 10px;
+}
+.EscalaDor label:nth-child(4){
+	 grid-area: c;
+    text-align: center;
+ 
+}
+.EscalaDor label:nth-child(5){
+	 grid-area: d;
+    text-align: right;
+  
+}
+.FrequenciaExercicio{
+	    display: grid;
+    grid-template:"a a "
+    			  "b ."
+    			  "c d ";
+}
+.FrequenciaExercicio label:nth-child(1){
+	 grid-area: a;
+	 padding-bottom: 20px;
+
+}
+.FrequenciaExercicio div:nth-child(2){
+	 grid-area: b;
+
+}
+.FrequenciaExercicio div:nth-child(3){
+	 grid-area: c;
+
+ 
+}
+.FrequenciaExercicio div:nth-child(4){
+	 grid-area: d;
+    
+  
+}
+.Rodape i:hover{
+cursor: pointer;
+
+}
+</style>
+</head>
+
+<body>
+<div class="Cabecalho">
+	<div>Área do Cliente</div>
+	<div class="Subtitulo">
+<img onclick="window.location='../'" src="IconesExternos/Voltar.png">
+<img src="IconesExternos/LogoRelax.png">
+		
+		
+		</div>
+	</div>
+</div>
+
+
+<div class="Menu">
+
+
+</div>
+<div class="Corpo">
+
+
+
+<div class="CorpoCadastroTopo">
+<div class="CorpoCadastro">
+	
+	<div class="Formulario">
+		<div class="Cabecalho2">Formulário</div>
+		<div class="Legenda">
+			<div><label class="Selecionado">Dados cadastrais</label></div>
+			<div><label>Contraindicações</label></div>
+			<div><label>Dados clínicos</label></div>
+			<div><label>Escala de dor</label></div>
+			<div><label>Hábitos de vida</label></div>
+		</div>
+		<div class="CorpoFormulario">
+			
+<div class="LadoLado"> <label>Nome*</label> <label>Sobrenome*</label> <input onblur="TransformarEmNome(this)" onkeydown="ValidarNome(this)" id="NomeCliente" type="text"> <input onkeydown="ValidarNome(this)" onblur="TransformarEmNome(this)" id="SobrenomeCliente" type="text"> </div> <div> <label>Data de Nascimento*</label> <input  min="1900-01-01" value="" max="<?php echo date('Y-m-d');?>" id="DataNascimento" type="date"> </div> <div> <label>Email</label> <input id="EmailCliente" onblur="CorrigirEmail(this)" placeholder="example@example.com" type="text"> </div> <div class="LadoLadoTelefone"> <label>Telefone*</label> <label>Código área</label> <label>Número</label> <input id="CodigoTelefone" onkeyup="CorrigirDDDTelefone(this)" onblur="AdicionarZeroDDD(this)" placeholder="" type="text"> <input id="NumeroTelefone" onkeyup="CorrigirTelefone(this)" onblur="ValidarTelefone(this)" placeholder="" type="text"> </div> <div> <label>Profissão</label> <input onkeydown="ValidarNome(this)" onblur="TransformarEmNome(this)" id="ProfissaoCliente" type="tel"> </div> <div class="ComoNosConheceu"> <label>Como nos conheceu*</label> <div><input id="ConheceuIndicacao" type="checkbox"><label>Indicação</label></div> <div><input id="ConheceuGoogle" type="checkbox"><label>Google</label></div> <div><input id="ConheceuFacebook" type="checkbox"><label>Facebook</label></div> <div><input id="ConheceuSite" type="checkbox"><label>Site</label></div> <div><input id="ConheceuInstagram" type="checkbox"><label>Instagram</label></div> <div><input id="ConheceuAnuncio" type="checkbox"><label>Anúncio</label></div> <div><input id="ConheceuOutros" type="checkbox"><label>Outros</label><input id="ConheceuOutrosInformado" type="text"></div> </div> <div> <label>Endereço</label> <input id="EnderecoCliente" type="tel"> </div> <div class="LadoLado"> <label>Cidade</label> <label>Estado</label> <select id="CidadeCliente" onchange="LimparCidadeCEP()" disabled><option value="">Selecione</option></select> <select id="EstadoCliente"   onchange="AlterarEstado(this)"> <option value="">Selecione</option> <option value="AC">Acre</option> <option value="AL">Alagoas</option> <option value="AP">Amapá</option> <option value="AM">Amazonas</option> <option value="BA">Bahia</option> <option value="CE">Ceará</option> <option value="DF">Distrito Federal</option> <option value="ES">Espirito Santo</option> <option value="GO">Goiás</option> <option value="MA">Maranhão</option> <option value="MS">Mato Grosso do Sul</option> <option value="MT">Mato Grosso</option> <option value="MG">Minas Gerais</option> <option value="PA">Pará</option> <option value="PB">Paraíba</option> <option value="PR">Paraná</option> <option value="PE">Pernambuco</option> <option value="PI">Piauí</option> <option value="RJ">Rio de Janeiro</option> <option value="RN">Rio Grande do Norte</option> <option value="RS">Rio Grande do Sul</option> <option value="RO">Rondônia</option> <option value="RR">Roraima</option> <option value="SC">Santa Catarina</option> <option value="SP">São Paulo</option> <option value="SE">Sergipe</option> <option value="TO">Tocantins</option> </select> </div> <div> <label>CEP</label> <input id="CEPCliente" onblur="AlterarCEP(this)" onkeyup="CorrigirCEP(this)" placeholder="" type="tel"> </div>
+
+	</div>
+		<div class="Alinhada">
+			<button onclick="AtualizarIndice(1)">
+				Anterior
+			</button>
+			<button  onclick="AtualizarIndice(2)">
+				Próximo
+
+			</button>
+			<button onclick="EnviarFormulario()">
+				Enviar
+
+			</button>
+		</div>
+	</div>
+
+</div>
+</div>
+<div class="Rodape">Feito por <i onclick="window.open('https://www.linkedin.com/in/euler-porto-53aa7119a/',1000);window.open('https://github.com/oiler707/Projetos',2000);">Euler Porto</i>. Todos os direitos reservados</div>
+</div>
+</body>
+
+<script>
+var BannerTop=["Formulário Médico - Demonstração","Dúvidas contate - oiler707@gmail.com","Área do Cliente"];
+var BannerCorpo=["IconesExternos/Banner1.jpg","IconesExternos/Banner2.jpg","IconesExternos/Banner3.jpg","IconesExternos/Banner4.jpg"];
+Cont=0;
+ContCorpo=0;
+setInterval(function(){
+
+	document.getElementsByClassName("Cabecalho")[0].getElementsByTagName("div")[0].innerHTML=BannerTop[Cont%3];
+	Cont=Cont+1;
+	
+},2000);
+
+
+function AtualizarIndice(acao){
+
+	AtualizarFormulario();
+	if(acao==1){
+		Indice=Indice-1;
+	}
+	else if(acao==2){
+		Indice=Indice+1;
+	}
+	AlterarFormulario(Indice);
+	AtualizarCorpo(Indice);
+	AtualizarPagina();
+}
+function AlterarIndice(NovoValor){
+	Indice=NovoValor;
+	AlterarFormulario(Indice);
+	AtualizarCorpo(Indice);
+	AtualizarPagina();
+}
+
+function AlterarFormulario(indice){
+	
+	Array.from(document.getElementsByClassName("Legenda")[0].getElementsByTagName("label")).forEach(function(e){
+	e.className="";
+
+	})
+	document.getElementsByClassName("Legenda")[0].getElementsByTagName("label")[indice].className="Selecionado"
+
+	document.getElementsByClassName("Legenda")[0].scrollTo(150*(indice-1),0)
+
+	if(indice==0){
+
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[0].style.display="none";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[1].style.display="";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[2].style.display="none";
+		document.getElementsByClassName("Legenda")[0].scrollTo(0,0)
+	}
+	else if(indice==4){
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[1].style.display="none";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[0].style.display="";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[2].style.display="";
+	}
+	else{
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[0].style.display="";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[1].style.display="";
+		document.getElementsByClassName("Alinhada")[0].getElementsByTagName("button")[2].style.display="none";
+	}
+	window.scroll(0,0); 
+}
+
+function ApagarCorpo(){
+
+	document.getElementsByClassName("CorpoFormulario")[0].innerHTML="";
+
+}
+
+
+function AtualizarCorpo(indice){
+	
+
+	VetorCorpo=['<div class="LadoLado"> <label>Nome*</label> <label>Sobrenome*</label> <input onblur="TransformarEmNome(this)" onkeydown="ValidarNome(this)" id="NomeCliente" type="text"> <input onkeydown="ValidarNome(this)" onblur="TransformarEmNome(this)" id="SobrenomeCliente" type="text"> </div> <div> <label>Data de Nascimento*</label> <input  min="1900-01-01" value="" max="<?php echo date('Y-m-d');?>" id="DataNascimento" type="date"> </div> <div> <label>Email</label> <input id="EmailCliente" onblur="CorrigirEmail(this)" placeholder="example@example.com" type="text"> </div> <div class="LadoLadoTelefone"> <label>Telefone*</label> <label>Código área</label> <label>Número</label> <input id="CodigoTelefone" onkeyup="CorrigirDDDTelefone(this)" onblur="AdicionarZeroDDD(this)" placeholder="" type="text"> <input id="NumeroTelefone" onkeyup="CorrigirTelefone(this)" onblur="ValidarTelefone(this)" placeholder="" type="text"> </div> <div> <label>Profissão</label> <input onkeydown="ValidarNome(this)" onblur="TransformarEmNome(this)" id="ProfissaoCliente" type="tel"> </div> <div class="ComoNosConheceu"> <label>Como nos conheceu*</label> <div><input id="ConheceuIndicacao" type="checkbox"><label>Indicação</label></div> <div><input id="ConheceuGoogle" type="checkbox"><label>Google</label></div> <div><input id="ConheceuFacebook" type="checkbox"><label>Facebook</label></div> <div><input id="ConheceuSite" type="checkbox"><label>Site</label></div> <div><input id="ConheceuInstagram" type="checkbox"><label>Instagram</label></div> <div><input id="ConheceuAnuncio" type="checkbox"><label>Anúncio</label></div> <div><input id="ConheceuOutros" type="checkbox"><label>Outros</label><input id="ConheceuOutrosInformado" type="text"></div> </div> <div> <label>Endereço</label> <input id="EnderecoCliente" type="tel"> </div> <div class="LadoLado"> <label>Cidade</label> <label>Estado</label> <select id="CidadeCliente" onchange="LimparCidadeCEP()" disabled><option value="">Selecione</option></select> <select id="EstadoCliente"   onchange="AlterarEstado(this)"> <option value="">Selecione</option> <option value="AC">Acre</option> <option value="AL">Alagoas</option> <option value="AP">Amapá</option> <option value="AM">Amazonas</option> <option value="BA">Bahia</option> <option value="CE">Ceará</option> <option value="DF">Distrito Federal</option> <option value="ES">Espirito Santo</option> <option value="GO">Goiás</option> <option value="MA">Maranhão</option> <option value="MS">Mato Grosso do Sul</option> <option value="MT">Mato Grosso</option> <option value="MG">Minas Gerais</option> <option value="PA">Pará</option> <option value="PB">Paraíba</option> <option value="PR">Paraná</option> <option value="PE">Pernambuco</option> <option value="PI">Piauí</option> <option value="RJ">Rio de Janeiro</option> <option value="RN">Rio Grande do Norte</option> <option value="RS">Rio Grande do Sul</option> <option value="RO">Rondônia</option> <option value="RR">Roraima</option> <option value="SC">Santa Catarina</option> <option value="SP">São Paulo</option> <option value="SE">Sergipe</option> <option value="TO">Tocantins</option> </select> </div> <div> <label>CEP</label> <input id="CEPCliente" onblur="AlterarCEP(this)" onkeyup="CorrigirCEP(this)" placeholder="" type="tel"> </div>','<div class="Observacao"> <label>Para darmos prosseguimento, é necessário preencher para autorização médica</label> </div> <div class="PerguntaSimples"><label>Usa marcapasso?*</label><div> <input type="checkbox" onchange="DesmarcarOutro(this)" id="SimMarcapasso" name="PerguntaSimples"><label for="SimMarcapasso">Sim</label></div> <div><input id="NaoMarcapasso" type="checkbox" onchange="DesmarcarOutro(this)" name="PerguntaSimples"><label for="NaoMarcapasso">Não</label></div> </div> <div class="PerguntaSimples"><label>Está gravida?*</label><div> <input type="checkbox" onchange="DesmarcarOutro(this)" id="SimGravida" name="PerguntaSimples"><label for="SimGravida" >Sim</label></div> <div><input id="NaoGravida" type="checkbox" onchange="DesmarcarOutro(this)" name="PerguntaSimples"><label for="NaoGravida">Não</label></div> </div> <div><label>Se sim, há quanto tempo?</label> <input id="TempoGravida" onblur="ValidarGravidez(this)" type="text"> </div> <div class="PerguntaSimples"><label>É hemofilico? (disturbio na coagulação do sangue)*</label> <div><input id="SimHemofilico" type="checkbox" onchange="DesmarcarOutro(this)"  name="PerguntaSimples"><label for="SimHemofilico">Sim</label></div> <div><input id="NaoHemofilico" type="checkbox" onchange="DesmarcarOutro(this)"  name="PerguntaSimples"><label for="NaoHemofilico">Não</label></div> </div>',
+		'<div><label>Queixa principal para início do tratamento:</label> <textarea id="QueixaPrincipal" onblur="" type="text"> </textarea></div><div><label>Possui problema emocional? Qual?</label> <textarea id="ProblemaEmocional" onblur="" type="text"> </textarea></div><div class="SintomasCronicos"> <label>Sofre de :</label> <div><input id="SintomasEstresse" type="checkbox"><label>Estresse</label></div> <div><input id="SintomaFaltaEnergia" type="checkbox"><label>Falta de energia</label></div> <div><input id="SintomasCansaço" type="checkbox"><label>Cansaço</label></div> <div><input id="SintomasInflamacao" type="checkbox"><label>Inflamacao</label></div> <div><input id="SintomasAnsiedade" type="checkbox"><label>Ansiedade</label></div> <div><input id="SintomasInsonia" type="checkbox"><label>Insônia</label></div> <div><input id="SintomasIrritabilidade" type="checkbox"><label>Irritabilidade</label></div> <div><input id="SintomasDepressao" type="checkbox"><label>Depressão</label></div> <div><input id="SintomasDoresColuna" type="checkbox"><label>Dores na coluna</label></div> <div><input id="SintomasDoresCabeca" type="checkbox"><label>Dor de cabeça</label></div> <div><input id="SintomasDoresMembrosSuperiores" type="checkbox"><label>Dor nos membros superiores</label></div> <div><input id="SintomasDoresMembrosInferiores" type="checkbox"><label>Dor nos membros inferiores</label></div> <div><input id="SintomasOutros" type="checkbox"><label>Outros</label><input id="SintomaOutrosInformado" type="text"></div> </div><div><label>Faz algum tratamento? Se sim, quais medicamentos utiliza?</label> <textarea id="OutroTratamento" onblur="" type="text"> </textarea></div>','<div><label>1 - Local da dor</label> <input type="text" id="EspecificaLocalDor1" onchange="AtualizarInputEscalaDeDor(this)"> </div> <div class="EscalaDor"> <label>Nível de dor</label> <input min="1" max="10" value="5" scale="1"  id="EspecificaItencisadeDor1" type="range" disabled> <label>Leve</label> <label>Moderada</label> <label>Intensa</label> </div> <div><label>2 - Local da dor</label> <input type="text" id="EspecificaLocalDor2" onchange="AtualizarInputEscalaDeDor(this)"> </div> <div class="EscalaDor"> <label>Nível de dor</label> <input min="1" max="10" value="5" scale="1" id="EspecificaItencisadeDor2" type="range" disabled> <label>Leve</label> <label>Moderada</label> <label>Intensa</label> </div> <div><label>3 - Local da dor</label> <input type="text" id="EspecificaLocalDor3" onchange="AtualizarInputEscalaDeDor(this)"> </div> <div class="EscalaDor"> <label>Nível de dor</label> <input min="1" max="10" value="5" scale="1" id="EspecificaItencisadeDor3" type="range" disabled> <label>Leve</label> <label>Moderada</label> <label>Intensa</label> </div>','<div class="PerguntaSimples"><label>Pratica exercício físico?</label><div> <input onchange="DesmarcarOutro(this)" type="checkbox" id="SimExercicioFisico" name="PerguntaSimples"><label for="PerguntaSimples">Sim</label></div> <div><input id="NaoExercicioFisico" onchange="DesmarcarOutro(this)" type="checkbox" name="PerguntaSimples"><label for="PerguntaSimples	">Não</label></div> </div> <div class="FrequenciaExercicio"> <label>Se sim, com que frequência?</label> <div><input value="12" id="FrequenciaExercicio" type="checkbox"><label>1 a 2 vezes por semana</label></div> <div><input id="FrequenciaExercicio" value="35" type="checkbox"><label>3 a 5 vezes por semana</label></div> <div><input id="FrequenciaExercicio" value="67" type="checkbox"><label>6 a todos os dias</label></div> </div> <div class="PerguntaSimples"><label>Tabagismo?</label><div> <input onchange="DesmarcarOutro(this)" type="checkbox" id="SimTabagismo" name="PerguntaSimples"><label for="PerguntaSimples">Sim</label></div> <div><input id="NaoTabagismo" onchange="DesmarcarOutro(this)" type="checkbox" name="PerguntaSimples"><label for="PerguntaSimples	">Não</label></div> </div> <div class="PerguntaSimples"><label>Álcool?</label><div> <input type="checkbox" onchange="DesmarcarOutro(this)" id="SimAlcool" name="PerguntaSimples"><label for="PerguntaSimples">Sim</label></div> <div><input id="NaoAlcool" onchange="DesmarcarOutro(this)"  type="checkbox" name="PerguntaSimples"><label for="PerguntaSimples	">Não</label></div> </div> <div><label>Dorme em média quantas horas?</label> <input id="TempoSono" onblur="" type="text"> </div>'
+	];
+
+	ApagarCorpo();
+	document.getElementsByClassName("CorpoFormulario")[0].innerHTML=VetorCorpo[indice];
+
+}
+
+function AtualizarFormulario(){
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("select")).forEach(function(e){
+
+		Formulario[e.id] = e.options[e.selectedIndex].value;
+	});
+	
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("textarea")).forEach(function(e){
+
+			Formulario[e.id]=e.value;
+	});
+
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("input")).forEach(function(e){
+
+
+		if(e.type=="checkbox"){
+			Formulario[e.id]=e.checked;
+
+		}
+		else{
+			if(e.disabled==false){
+			Formulario[e.id]=e.value;
+			}
+		}
+
+	});
+}
+window.onscroll = function(e){
+Location=  1-parseInt(window.pageYOffset)/200;
+if(Location<0){
+	document.getElementsByClassName("Cabecalho")[0].style.display="none";
+}
+if(Location>0.75){
+	document.getElementsByClassName("Cabecalho")[0].style.display="";
+}
+document.getElementsByClassName("Cabecalho")[0].style.opacity= 1-parseInt(window.pageYOffset)/200;
+
+}
+
+function AlterarEstado(element){
+
+	LimparCidadeCEP();
+	RetornarCidades(element.value,"");
+	//VerificarEstadoSelecionado(element.value);
+}
+function LimparCidadeCEP(){
+	document.getElementById("CEPCliente").value="";
+	document.getElementById("EnderecoCliente").value="";
+}
+
+async function ModificarEstado(Estado){
+	
+ document.querySelector("#EstadoCliente").value=Estado;
+ 
+// RetornarCidades(Estado,Cidade);
+ 	
+ 
+
+//VerificarEstadoSelecionado(Estado);
+}
+
+function ModificarEndereco(Endereco){
+document.querySelector("#EnderecoCliente").value=Endereco;
+}
+function ModificarCidade(Cidade){
+
+	if(Array.from(document.querySelector("#CidadeCliente").options).filter(x=>x.value==Cidade).length==0){
+		document.querySelector("#CidadeCliente").innerHTML="<option value="+Cidade+">"+Cidade+"</option>";
+
+	}
+	else{
+	//console.log(document.querySelector("#CidadeCliente").innerHTML);
+		document.querySelector("#CidadeCliente").value=Cidade;
+
+	}	
+	document.querySelector("#CidadeCliente").disabled=false;
+}
+
+ function AtualizarCidadesFormulario(Cidades,Cidade){
+	
+
+	document.querySelector("#CidadeCliente").innerHTML="<option value=''>Selecione</option>"
+	
+	Cidades.forEach(function(e){
+		document.querySelector("#CidadeCliente").innerHTML+="<option value='"+e+"'>"+e+"</option>"
+
+	});
+	
+	//ModificarCidade(Cidade);
+}
+
+
+function VerificarEstadoSelecionado(Estado){
+	if(Estado==""){
+		document.querySelector("#CidadeCliente").disabled=true;
+		document.querySelector("#CidadeCliente").value="";
+	}
+	else{
+		document.querySelector("#CidadeCliente").disabled=false;
+		
+	}
+}
+
+function RetornarCidades(Estado,Cidade){
+	var xhttp = new XMLHttpRequest();
+VerificarEstadoSelecionado("");
+	xhttp.open("GET", "../ProjetoFormulario/Rotas/Cidades/?estado="+Estado, true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send();
+	
+	xhttp.onreadystatechange = function () {
+		    if (this.readyState == 4 && this.status == 200) {
+		    	
+				//console.log(JSON.parse(this.response)[0]["cidades"]);	
+					
+				AtualizarCidadesFormulario(JSON.parse(this.response)[0]["cidades"],Cidade);
+				VerificarEstadoSelecionado(Estado);
+				
+			}
+	}
+
+	//return Cidades.filter(x=>x.sigla==Estado)[0].cidades;
+}
+function AlterarCEP(element){
+	if(ValidarCEP(element)){
+		var xhttp = new XMLHttpRequest();
+
+		xhttp.open("GET", "https://viacep.com.br/ws/"+element.value+"/json/", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send();
+		xhttp.onreadystatechange = function () {
+		    if (this.readyState == 4 && this.status == 200) {
+		    	
+					
+					if(JSON.parse(this.response)["erro"]!=true){
+							
+							ModificarEstado(JSON.parse(this.response)["uf"]);
+							ModificarCidade(JSON.parse(this.response)["localidade"])
+							ModificarEndereco(JSON.parse(this.response)["logradouro"]);
+							
+							
+					}
+					else{
+						
+						ModificarEstado("");
+						ModificarCidade(JSON.parse(this.response)[""])
+						ModificarEndereco("");
+
+					}
+			}
+		}
+	}
+}
+function CorrigirCEP(element){
+	var e = event;
+	aux = element.value.replace(/\D/g, '')
+		
+	if((ValidarNumero(e.key)&&aux.length<=8)||e.key=="Backspace"){
+
+		
+		if(aux.length>4&&e.key!="Backspace"){
+			element.value = aux.substring(0,5).replace(/\D/g, '')+"-"+aux.substring(5,8).replace(/\D/g, '');
+		}
+	}
+	else if(e.key=="Tab"||e.key=="ArrowRight"||e.key=="ArrowLeft"){
+		
+	}
+	else{
+		element.value = aux.substring(0,5).replace(/\D/g, '')+"-"+aux.substring(5,8).replace(/\D/g, '');
+		//e.preventDefault();
+	}
+	
+}
+
+
+
+function ValidarTelefone(element){
+	
+	aux=element.value.replace(/\D/g, '');
+	if(aux.length==8){
+		element.value=aux.substring(0,4)+"-"+aux.substring(4,8);
+	}
+	else if(aux.length==9){
+		element.value=aux.substring(0,5)+"-"+aux.substring(5,9);
+
+	}
+	else{
+		element.value="";
+	}
+	
+}
+
+function AdicionarZeroDDD(element){
+	aux=element.value.replace(/\D/g, '')
+	if(aux.length!=2){
+		element.value="";
+	}
+	else{
+		element.value="("+aux+")";	
+	}
+}
+
+function CorrigirEmail(element){
+
+	if((element.value.search("@")>-1)&&(element.value.search(".")>-1)){
+
+	}
+	else{
+		element.value="";
+	}
+}
+
+function ValidarNome(element){
+	var e = event;
+	
+	if(ValidarLetra(e.key)||e.key==" "){
+		
+
+	}
+	else{
+		e.preventDefault();
+	}
+}
+
+function CorrigirTelefone(element){
+	var e = event;
+	aux = element.value.replace(/\D/g, '');
+
+	if((ValidarNumero(e.key)&&aux.length<=9)||e.key=="Backspace"){
+
+		
+		if(element.value.length>4&&e.key!="Backspace"){
+			
+			element.value = aux.substring(0,5).replace(/\D/g, '')+"-"+aux.substring(5,9).replace(/\D/g, '');
+		}
+	}
+	else if(e.key=="Tab"||e.key=="ArrowRight"||e.key=="ArrowLeft"){
+		
+	}
+	else{
+		element.value = aux.substring(0,5).replace(/\D/g, '')+"-"+aux.substring(5,9).replace(/\D/g, '');
+		
+	}
+	
+}
+
+function CorrigirDDDTelefone(element){
+	var e = event;
+	aux = element.value.replace(/\D/g, '');
+	
+
+	if((ValidarNumero(e.key)&& aux.length<=2)||e.key=="Backspace"){
+
+		
+		if(e.key!="Backspace"){
+			
+			element.value = "("+aux+")"
+			//e.preventDefault();
+		}
+		
+	}
+	else if(e.key=="Tab"||e.key=="ArrowRight"||e.key=="ArrowLeft"){
+
+	}
+	else{
+		
+		element.value = "("+aux.substring(0,2)+")"
+	
+	}
+	
+}
+function TransformarEmNome(element){
+	var Nome=""
+	
+	element.value.split(" ").forEach(function(e){
+	if(e!=""){
+			Nome+=e.charAt(0).toUpperCase()+e.slice(1)+" ";
+		}
+	});
+	element.value=  Nome.slice(0,-1)
+}
+
+function ValidarLetra(str){
+
+	return /[a-zA-Z]/.test(str);
+}
+
+function ValidarNumero(str){
+
+	return /^\d+$/.test(str);
+}
+
+function ValidarCEP(element){
+	
+	 if(/^[0-9]{8}$/.test(String(element.value).replace(/\D/g, ''))){
+	 	
+	 	return true;
+	 }
+	 else{
+	 	element.value="";
+	 	return false;
+	 }
+}
+
+function ValidarGravidez(element){
+	var aux =element.value.split(" ");
+	
+	var temporario=["meses ","mes ","dias ","dia ","semana ","semanas "];
+	
+
+	if(aux.length>1){
+		if(ValidarNumero(aux[0])&& ExpressaoRegular(temporario).test(aux[1].toLowerCase()+" ") ){
+			
+		} 
+		else{
+			element.value=""
+		}
+	}
+	else{
+			element.value=""
+		}
+}
+function ExpressaoRegular(expressoes){
+	temporario="";
+	expressoes.forEach(function(e){
+		temporario+="^"+e+"|";
+	})
+	return  new RegExp(temporario.slice(0,-1));
+}
+
+
+function AtualizarPagina(){
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("select")).forEach(function(e){
+		if(ExisteCampo(e.id)){
+			
+			if(Array.from(e.options).filter(x=>x.value==Formulario[e.id]).length>0){
+				e.value=Formulario[e.id];
+			}
+			else{
+				e.innerHTML="<option value="+Formulario[e.id]+" selected>"+Formulario[e.id]+"</option>";
+				
+			}
+			e.disabled=false;
+		}
+	});
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("textarea")).forEach(function(e){
+		if(ExisteCampo(e.id)){
+			e.value=Formulario[e.id];
+		}
+	});
+
+
+	Array.from(document.getElementsByClassName("CorpoFormulario")[0].getElementsByTagName("input")).forEach(function(e){
+		
+
+		if(e.type=="checkbox"&& ExisteCampo(e.id)){
+			e.checked=Formulario[e.id];
+
+		}
+		else if(ExisteCampo(e.id)){
+
+			e.value=Formulario[e.id];
+
+		}
+
+	});
+
+}
+function ExisteCampo(valor){
+	if(typeof  Formulario[valor] != "undefined"){
+		return true
+	}
+	return false;
+}
+
+function AtualizarInputEscalaDeDor(element){
+	if(element.value!=""){
+		element.parentElement.nextElementSibling.getElementsByTagName("input")[0].disabled=false;
+
+	}
+}
+
+function DesmarcarOutro(element){
+	if(element.id.substring(0,3)=="Sim"){
+		document.getElementById("Nao"+element.id.substring(3)).checked = (!element.checked)
+	}
+	else{
+		document.getElementById("Sim"+element.id.substring(3)).checked = (!element.checked)
+	}
+}
+function EnviarFormulario(){
+	TemporarioValidarFormulario();
+}
+
+
+
+function ValidarTudo(){
+	
+	Requeridos=["NomeCliente","SobrenomeCliente","DataNascimento","CodigoTelefone","NumeroTelefone"];
+
+	RequeridoNoMinimoUm=[["ConheceuAnuncio","ConheceuFacebook","ConheceuGoogle","ConheceuIndicacao","ConheceuInstagram"
+	,"ConheceuOutros","ConheceuOutrosInformado","ConheceuSite"],["EspecificaLocalDor1","EspecificaLocalDor2","EspecificaLocalDor3"]];
+	
+	RequeridoSegundo=[["ConheceuOutros","ConheceuOutrosInformado"],["SimGravida","TempoGravida"],["SintomasOutros","SintomaOutrosInformado"],["SimExercicioFisico","FrequenciaExercicio"]];
+
+	RequeridoApenasUm=[["SimMarcapasso","NaoMarcapasso"],["SimGravida","NaoGravida"],["SimMarcapasso","NaoMarcapasso"],
+	["SimHemofilico","NaoHemofilico"]];
+	var temporario=true;
+
+	 Requeridos.forEach(function(e){
+		
+		if(Formulario[e]==""){
+
+			temporario =  false;
+			if(document.getElementById(e)!=undefined){
+				document.getElementById(e).style.background="rgb(255 190 150)";
+			}
+			
+		}
+	})
+	
+
+
+	RequeridoNoMinimoUm.forEach(function(e){
+		var temporarioRequeridoUm=false
+		e.forEach(function(y){
+			if(Formulario[y]==true){
+				temporarioRequeridoUm=true;
+			}
+
+
+		})
+		if(temporarioRequeridoUm==false){
+			temporario =  false;
+if(document.getElementById(e[0])!=undefined){
+			if(document.getElementById(e[0]).type=="checkbox"){
+				aux = document.getElementById(e[0]).parentElement.parentElement.getElementsByTagName("label")[0].innerHTML
+			document.getElementById(e[0]).parentElement.parentElement.getElementsByTagName("label")[0].innerHTML="<mark>"+aux+"</mark>"
+			}
+			else{
+				document.getElementById(e[0]).style.background="rgb(255 190 150)";
+			}
+
+			}
+
+		
+		}
+
+	})
+
+	RequeridoSegundo.forEach(function(e){
+
+		if(Formulario[e[0]]==true&&Formulario[e[1]]==""){
+			temporario=false;
+			if(document.getElementById(e[1])!=undefined){
+				document.getElementById(e[1]).style.background="rgb(255 190 150)";
+			}
+		}
+
+	})
+
+	
+
+	RequeridoApenasUm.forEach(function(e){
+		if(Formulario[e[0]]==Formulario[e[1]]&& ((Formulario[e[0]]+Formulario[e[1]])!=1) ){
+			temporario=false;
+
+if(document.getElementById(e[0])!=undefined){
+			if(document.getElementById(e[0]).type=="checkbox"){
+				aux = document.getElementById(e[0]).parentElement.parentElement.getElementsByTagName("label")[0].innerHTML
+			document.getElementById(e[0]).parentElement.parentElement.getElementsByTagName("label")[0].innerHTML="<mark>"+aux+"</mark>"
+			}
+		}
+		}
+
+	});
+
+
+	return temporario;
+	
+}
+
+function TemporarioValidarFormulario(){
+	var xhttp = new XMLHttpRequest();
+	
+
+	xhttp.open("POST", "../ProjetoFormulario/Rotas/ValidarFormulario/",true);
+
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	ParametroAcao="Formulario="+JSON.stringify(Formulario);
+
+	xhttp.send(ParametroAcao);
+	
+	xhttp.onreadystatechange = function () {
+		    if (this.readyState == 4 && this.status == 200) {
+		    	
+		    	
+		    		if(JSON.parse(this.response)["Validado"]){
+		    			document.getElementsByClassName("Legenda")[0].innerHTML="";
+		    			document.getElementsByClassName("CorpoFormulario")[0].innerHTML='<div style="text-align:center"><label>Finalizado. Obrigado pela dedicação!</label></div>';
+
+		    			document.getElementsByClassName("Alinhada")[0].innerHTML="<button onclick='window.location.reload()'>Reiniciar</button>";
+		    		}
+		    		else{
+						AlterarIndice(JSON.parse(this.response)["PaginaErro"])
+						ValidarTudo();
+					}
+			}
+	}
+
+	//return Cidades.filter(x=>x.sigla==Estado)[0].cidades;
+}
+
+
+AlterarFormulario(0);
+</script>
+</html>
