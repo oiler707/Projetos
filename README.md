@@ -7,11 +7,12 @@ código em suas respectivas pastas.
 
 Projeto Formulário Médico
 ============================================================================
-|Projeto para cadastrar uma pré-consulta  |
-|online de seu cliente com seu médico.    |
-|Neste projeto há consulta de API externa | 
-|de CEPs.                                 |  
-
+<div style="text-align: right">
+Projeto para cadastrar uma pré-consulta  
+online de seu cliente com seu médico.    
+Neste projeto há consulta de API externa 
+de CEPs.                                 
+</div>
 Projeto Loja Virtual
 ============================================================================
 Simulador de compra e venda de  produtos  
