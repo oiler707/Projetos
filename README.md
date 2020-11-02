@@ -7,11 +7,11 @@ código em suas respectivas pastas.
 
 Projeto Formulário Médico
 ============================================================================
-<div style="text-align: right">  
-Projeto para cadastrar uma pré-consulta \n
+{: style="text-align: right" }
+Projeto para cadastrar uma pré-consulta  
 online de seu cliente com seu médico.    
 Neste projeto há consulta de API externa 
-de CEPs.</div>  
+de CEPs.  
 
 Projeto Loja Virtual
 ============================================================================
