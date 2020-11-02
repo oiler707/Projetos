@@ -1,8 +1,8 @@
 Bem Vindo.
 ============================================================================
 Acesso para ver projetos em : http://github-oiler707-com.umbler.net/  
-* |usuário | umbler         |
-* |senha   | testehospedagem|
+* | usuário | umbler |
+* | senha | testehospedagem |
 
 código em suas respectivas pastas.
 
