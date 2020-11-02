@@ -7,7 +7,7 @@ código em suas respectivas pastas.
 
 Projeto Formulário Médico
 ============================================================================
-<div style="background: red"> your-text-here </div>  
+<div style="color: red"> your-text-here </div>  
 
 Projeto para cadastrar uma pré-consulta  
 online de seu cliente com seu médico.    
