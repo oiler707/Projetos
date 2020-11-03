@@ -18,6 +18,15 @@ As Kanye West said:
 I think you should use an
 `<addr>` element here instead.
 
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
+
 Projeto Formulário Médico
 ============================================================================
 <div style="color: red"> your-text-here </div>  
