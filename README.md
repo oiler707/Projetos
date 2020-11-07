@@ -1,10 +1,7 @@
 Bem Vindo
 ============================================================================
-Acesso para ver [projetos aqui](http://github-oiler707-com.umbler.net/)
-```
- usuário : umbler
- senha   : testehospedagem
-```
+Acesso para ver [projetos aqui](http://repositoriooiler.com.br/)
+
 código em suas respectivas pastas.
 
 Projeto Formulário
