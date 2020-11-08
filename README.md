@@ -1,21 +1,6 @@
-plugins: [      
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [{
-        resolve: "gatsby-remark-external-links",
-        options: {
-          target: "_blank",
-          rel: "noopener noreferrer"
-        }
-      }]
-    }
-  },
-
-
 Bem Vindo
 ============================================================================
-Acesso para ver [projetos aqui](https://repositoriooiler.com.br/?target=_blank)  
+Acesso para ver [projetos aqui](https://repositoriooiler.com.br/)  
 
 código em suas respectivas pastas.
 
