@@ -1,7 +1,8 @@
 Bem Vindo
 ============================================================================
 Acesso para ver [projetos aqui](https://repositoriooiler.com.br/?target=_blank)  
-
+var pattern = /a href=/g;
+var sanitizedMarkDownText = rawMarkDownText.replace(pattern,"a target='_blank' href=");
 código em suas respectivas pastas.
 
 Projeto Formulário
