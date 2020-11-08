@@ -1,6 +1,6 @@
 Bem Vindo
 ============================================================================
-Acesso para ver [projetos aqui](http://repositoriooiler.com.br/){:target="_blank" rel="noopener"}
+Acesso para ver [projetos aqui](http://repositoriooiler.com.br/)
 
 código em suas respectivas pastas.
 
