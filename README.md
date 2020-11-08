@@ -6,7 +6,7 @@ código em suas respectivas pastas.
 
 Projeto Formulário
 ============================================================================
-> Projeto para cadastrar uma pré-consulta online de cliente  
+> Projeto para cadastrar pré-consulta online de cliente  
 com seu  médico.  Neste  projeto há consulta de API  externa  
 de CEPs.  
 
