@@ -10,6 +10,12 @@ Projeto Formulário
 com seu  médico.  Neste  projeto há consulta de API  externa  
 de CEPs.  
 
+Projeto Contagem Acessos
+============================================================================
+> Projeto para consultar acessos na aplicação. Nesse   
+projeto é possível visualizar acessos em cada   
+estado do país.  
+
 Projeto Loja Virtual
 ============================================================================
 > Simulador de compra e venda de produtos em uma lanchonete  
