@@ -1,0 +1,17 @@
+<style>
+	#GraficoPizza svg{ height:200; width:200; } 
+	#GraficoPizza .Total{ r:9.99; cx:10; cy:10; fill:#0000ff3d; } 
+	#GraficoPizza .Acessos{ r:5; cx:10; cy:10 ; fill:transparent; stroke-width:10; 
+		stroke: #01ce61; } 
+	#GraficoPizza .Texto{ font-size: 4px; fill: white; font-family: cursive; text-anchor:middle; x:50%; dominant-baseline:middle; }
+	#DeterminadoDia{ padding-top:0px; padding:0px} 
+	#DeterminadoDia div{ padding:30px; padding-top:0px} 
+	#UsuariosAcessandoSistema{ padding-top:0px; padding:0px}
+	#UsuariosAcessandoSistema div{ padding:30px; padding-top:0px}
+	#GraficoPizza{
+	height: 300px;
+	    display: flex;
+	    justify-content:center;
+}
+
+</style>

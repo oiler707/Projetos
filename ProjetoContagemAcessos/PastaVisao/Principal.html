@@ -1,0 +1,38 @@
+<html>
+<head>
+
+<style>
+@media only screen and (max-width: 1000px) {
+	
+body { 
+      font-size: 13px;
+   	
+   }
+}
+body{
+	margin: 0px;
+}
+
+.Pagina{
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 260px auto;
+	
+    grid-template-areas:
+        "a b"
+        "a c";
+}
+</style>
+</head>
+	<body>
+		<div class="Pagina">
+		<?=$Menu  ?>
+
+
+		<?=$Corpo?>
+		
+		<?=$Rodape  ?>
+		</div>
+		<div class="Notificacao"><label>Nome em formato invalido </label><label class="Fechar" onclick="Fechar(this)">X</label></div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+document.getElementById("TotalAcessosDia").innerHTML='<?=$Corpo?>'

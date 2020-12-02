@@ -1,0 +1,120 @@
+
+<div class="Corpo">
+
+<div>Quantidade de acessos : <label id="TotalAcessos"></label></div>
+<div>Quantidade de usuários por dia em todo o período : <label id="TotalAcessosDia"></label></div>
+
+<div><label>Período de</label>  <input type="date" id="DiaAnterior"><label>até</label><input type="date" id="DiaProximo"><button onclick="ServicoDashBoard('AcessosPizza');ServicoDashBoard('AcessoChart');">Visualizar</button></div>
+<div id="GraficoPizza">
+
+</div>
+<div id="NotificacaoChart"></div>
+<div id="ChartDiaDia">
+
+</div>
+
+<style>
+
+body{
+	    overflow-y: scroll;
+}
+.Corpo .chart-container{
+	    padding: 0px;
+}
+</style>
+
+
+<style>
+.Corpo{
+	grid-area:b;
+	    padding-bottom:  80px;
+	    padding-top:   20px;
+}
+
+.Corpo div{
+	font-size: 18px;
+	font-family: monospace;
+	text-align: center;
+	padding: 20px 100px;
+	font-weight: 600;
+}
+
+.Corpo input{
+		font-size: 18px;
+	font-family: monospace;
+	text-align: justify;
+	padding: 5px;
+	margin:0px 10px;  
+	width: 400px;
+	
+   
+	font-weight: 600;
+}
+#TotalAcessos{ 
+	width: 40px; 
+	display: inline-block;	
+	text-align: left;
+}
+#TotalAcessosDia{ 
+	width: 40px; 
+	display: inline-block;
+	text-align: left;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    background: red;
+    transform: translateX(-30px);
+    width: 134px;
+    background: transparent;
+    position: absolute;
+}
+.Corpo input{
+	width: fit-content;
+}
+.Corpo button{
+	height: 40px;
+	color: white; 
+	background: blue; 
+	font-size: 18px; 
+	border-radius: 4px; 
+	border: solid 0px;
+	font-weight: bold; 
+	    padding: 10px 20px;
+}
+.Corpo button:hover{
+	cursor: pointer;
+	background: #0000aa;
+
+}
+.Corpo button:focus{
+outline: none;
+}
+</style>
+
+</div>
+
+<script>
+function ServicoDashBoard(Fator){
+		var TemporarioServicoDashBoard = new Worker("../../Servico/DashBoard.js");
+		
+		Fragmento={"DiaAnterior":document.querySelector("#DiaAnterior").value,
+				  "DiaProximo":document.querySelector("#DiaProximo").value
+		}
+		TemporarioServicoDashBoard.postMessage({Fator:Fator,Fragmento:Fragmento})
+		
+
+
+
+		TemporarioServicoDashBoard.onmessage= function(e){
+		
+			eval(e.data.Sucesso);
+			
+			//document.getElementById("Adicionais").innerHTML=e.data.Norma;
+		}
+}
+ServicoDashBoard('AcessosDia');
+ServicoDashBoard('AcessosTotal');
+
+</script>
+

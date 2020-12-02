@@ -1,0 +1,119 @@
+<div class="Corpo">
+	<div>Quantidade de acessos por estado</div>
+	<div><label>Período de</label>  <input type="date" id="DiaAnterior"><label>até</label><input type="date" id="DiaProximo"><button onclick="Servico('MapaRequisicoes')">Visualizar</button></div>
+	<div id='Cidades'><div></div><div></div></div>
+	
+	<div class='MapaRequisicoes'></div>
+	
+
+	
+
+
+</div>
+<style>
+.Corpo{
+	grid-area:b;
+	    padding-bottom:  80px;
+	    padding-top:   20px;
+}
+
+.Corpo div{
+	font-size: 18px;
+	font-family: monospace;
+	text-align: center;
+	padding: 20px 200px;
+	font-weight: 600;
+}
+
+.Corpo input{
+		font-size: 18px;
+	font-family: monospace;
+	text-align: justify;
+	padding: 5px;
+	margin:0px 10px;  
+	width: 400px;
+	
+   
+	font-weight: 600;
+}
+
+
+.Notificacao{
+	position: fixed;
+    width: 85%;
+    text-align: center;
+    top: 38.5%;
+    margin-left: 15%;
+    font-size: 18px;
+    font-family: monospace;
+    visibility: collapse;
+    
+    font-weight: 600;
+}
+	
+
+::-webkit-calendar-picker-indicator {
+    background: red;
+        transform: translateX(-30px);
+        
+       	width: 134px;
+    background: transparent;
+    position: absolute;
+}
+
+.Corpo button{
+	height: 40px;
+	color: white; 
+	background: blue; 
+	font-size: 18px; 
+	border-radius: 4px; 
+	border: solid 0px;
+	font-weight: bold; 
+	    padding: 10px 20px;
+}
+.Corpo button:hover{
+	cursor: pointer;
+	background: #0000aa;
+
+}
+.Corpo input{
+	width: fit-content;
+}
+.Corpo button:focus{
+outline: none;
+}
+.Corpo .MapaRequisicoes{
+	    visibility: collapse;
+   	
+
+}
+body{
+	overflow-y:scroll;
+}
+</style>
+
+<script>
+
+function Servico(Fator){
+		var TemporarioServico= new Worker("../../Servico/MapaRequisicoes.js");
+		
+		Fragmento={"DiaAnterior":document.querySelector("#DiaAnterior").value,
+				  "DiaProximo":document.querySelector("#DiaProximo").value
+		}
+		TemporarioServico.postMessage({Fator:Fator,Fragmento:Fragmento})
+		
+
+
+
+		TemporarioServico.onmessage= function(e){
+			eval(e.data.Sucesso);
+			
+			//document.getElementById("Adicionais").innerHTML=e.data.Norma;
+		}
+}
+
+
+
+//CriarPizzaAcessosSistema();
+
+</script>	
