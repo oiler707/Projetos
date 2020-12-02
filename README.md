@@ -12,9 +12,8 @@ de CEPs.
 
 Projeto Contagem Acessos
 ============================================================================
-> Projeto para consultar acessos na aplicação. Nesse   
-projeto é possível visualizar acessos em cada   
-estado do país.  
+> Projeto para consultar acessos na aplicação. Nesse projeto é possível   
+visualizar acessos em cada estado do país.  
 
 Projeto Loja Virtual
 ============================================================================
