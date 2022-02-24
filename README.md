@@ -12,8 +12,8 @@ devido alguns elementos faltantes.
 Regressão
 ============================================================================
 > Função para calcular valores futuros de acordo com valores antigos em javascript.  
-> Usagem :  
-  [RegressaoExponencial([Vetor valores antigos], Posição previsão futura);]  
+> Usagem :  <
+_ RegressaoExponencial([Vetor valores antigos], Posição previsão futura);  
 > Ex :  
 _ RegressaoExponencial([1,2,3,4,5], 6) = 8.424172486141028
 
