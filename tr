@@ -1,4 +1,4 @@
-function controlPeriodOper() {
+function control() {
   var unlimited, prefix, time, mode, credits, group, html, event, limited, splitted, label, devices, rule,
     remove, renew, period, temp_prefix, temp_renew_day, temp_renew_hour  , temp_day_month , data, show_prop,
     hide_prop, hide_css  , show_css, week, month, hour, validation;
