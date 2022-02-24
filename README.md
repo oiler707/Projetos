@@ -9,6 +9,12 @@ Código Atual
 > Apenas função demonstrativa em javascript feito em 02/2022. Não é possível simular  
 devido alguns elementos faltantes.
 
+Regressão
+============================================================================
+> Função para calcular valores futuros de acordo com valores antigos em javascript.
+> Usagem : RegressaoExponencial([Vetor valores antigos], Posição previsão futura);
+> Ex :  RegressaoExponencial([1,2,3,4,5], 6) = 8.424172486141028
+
 Projeto Formulário
 ============================================================================
 > Projeto para cadastrar pré-consulta online de cliente  
