@@ -12,7 +12,7 @@ devido alguns elementos faltantes.
 Regressão
 ============================================================================
 > Função para calcular valores futuros de acordo com valores antigos em javascript.  
-> Usagem :  <
+> Usagem :  
 _ RegressaoExponencial([Vetor valores antigos], Posição previsão futura);  
 > Ex :  
 _ RegressaoExponencial([1,2,3,4,5], 6) = 8.424172486141028
@@ -26,11 +26,13 @@ de CEPs.
 
 Projeto Contagem Acessos
 ============================================================================
+[Need PHP]
 > Projeto para consultar acessos na aplicação. Nesse projeto é possível   
 visualizar acessos em cada estado do país.  
 
 Projeto Loja Virtual
 ============================================================================
+[Need PHP]
 > Simulador de compra e venda de produtos em uma lanchonete  
 virtual. Seu email cadastrado receberá notificações de ações na loja  
 neste projeto.
