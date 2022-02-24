@@ -45,7 +45,7 @@ function Regressao(Y,PosicaoFuturaRequerida){
 
 	A = Math.exp(Az)
 	B = Bz
-	//RETORNO A*EXP(B*X) ONDE X É O PROXIMO VALOR DE ENTRADA
+	//RETORNO A*EXP(B*X) ONDE X Ã‰ O PROXIMO VALOR DE ENTRADA
 
 	return A*Math.exp(B*PosicaoFuturaRequerida);
 
