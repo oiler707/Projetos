@@ -4,6 +4,11 @@ Acesso para ver [projetos aqui](https://repositoriooiler.com.br/). (Inativo, vol
 
 código em suas respectivas pastas.
 
+Código Atual
+============================================================================
+> Apenas para demonstrar nível de programação atual. Não é possível simular
+devido alguns elementos faltantes.
+
 Projeto Formulário
 ============================================================================
 > Projeto para cadastrar pré-consulta online de cliente  
