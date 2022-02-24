@@ -6,7 +6,7 @@ código em suas respectivas pastas.
 
 Código Atual
 ============================================================================
-> Apenas para demonstrar nível de programação atual. Não é possível simular
+> Apenas para demonstrar nível de programação atual. Não é possível simular 
 devido alguns elementos faltantes.
 
 Projeto Formulário
