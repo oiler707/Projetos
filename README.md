@@ -15,7 +15,7 @@ Regressão
 > Usagem :  
 _ RegressaoExponencial([Vetor valores antigos], Posição previsão futura);  
 > Ex :  
-_ _RegressaoExponencial([1,2,3,4,5], 6) = 8.424172486141028
+_ RegressaoExponencial([1,2,3,4,5], 6) = 8.424172486141028
 
 Projeto Formulário
 ============================================================================
