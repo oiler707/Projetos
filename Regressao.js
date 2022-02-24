@@ -1,17 +1,16 @@
 
 function RegressaoExponencial(Vetor,Predicao){
 
-var script = document.createElement('script');
-script.onload = function () {
+	var script = document.createElement('script');
+	script.onload = function () {
 
-     console.log(Regressao(Vetor,Predicao));
-	
-};
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.js';
+		console.log(Regressao(Vetor,Predicao));
 
-document.head.appendChild(script);
+	};
+	script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.js';
 
-	
+	document.head.appendChild(script);
+
 };
 
 function Regressao(Y,PosicaoFuturaRequerida){
