@@ -49,7 +49,7 @@ function Regressao(Y,PosicaoFuturaRequerida){
 	return A*Math.exp(B*PosicaoFuturaRequerida);
 
 }
-
+//EXEMPLOS:
 RegressaoExponencial([1,2,3,4,5],0);
 RegressaoExponencial([1,2,3,4,5],1);
 RegressaoExponencial([1,2,3,4,5],2);
