@@ -7,6 +7,7 @@ Estudos de Docker e Angular [~]
 > Criando projeto com Angular em Docker container.
 
 [Regressão](https://repositoriooiler.com.br/) [2021]
+
 ============================================================================
 > Função para calcular valores futuros de acordo com valores antigos em javascript.  
 > Definição :  
