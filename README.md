@@ -2,11 +2,11 @@ Bem Vindo
 ----------------------------------------------------------------------------
 Acesso para ver [projetos aqui](https://repositoriooiler.com.br/). (Inativo, voltará em breve)  
 
-[Estudos de Docker e Angular [~]](/projeto-app-angular/app-angular)
+[Estudos de Docker e Angular (~)](/projeto-app-angular/app-angular)
 ----------------------------------------------------------------------------
 > Criando projeto com Angular em Docker container.
 
-[Regressão [2021]](https://repositoriooiler.com.br/)
+[Regressão (2021)](/Regressao.js)
 ----------------------------------------------------------------------------
 > Função para calcular valores futuros de acordo com valores antigos em javascript.  
 > Definição :  
