@@ -4,7 +4,7 @@ Acesso para ver [projetos aqui](https://repositoriooiler.com.br/). (Inativo, vol
 
 [Estudos de Docker e Angular (~)](/projeto-app-angular/app-angular)
 ----------------------------------------------------------------------------
-> Criando projeto com Angular em Docker container.
+> Criando projeto com Angular com Docker container.
 
 [Regressão (2021)](/Regressao.js)
 ----------------------------------------------------------------------------
