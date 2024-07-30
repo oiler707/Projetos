@@ -3,7 +3,7 @@
 		ini_set('memory_limit', '2G');
 		set_time_limit(2000);
 
-	// FUNCAO PARA VERIFICAR SE EXISTE ESTOQUE
+	// FUNCAO PARA VERIFICAR SE EXISTE ESTOQUE N
   	function verificar_estoque ($produto, $cor , $tamanho , $deposito , $data_disp, $pdo) {
   		try {
   			$sql = "SELECT id FROM empresa.estoque WHERE produto=:produto AND cor=:cor AND tamanho=:tamanho AND deposito=:deposito AND data_disponibilidade=:data_disp";
