@@ -28,19 +28,19 @@
 	// PRINCIPAL FUNCAO DO PROCESSO SELETIVO QUE ATUALIZA A QUANTIDADE DO ESTOQUE OU INSERE NOVO ESTOQUE DO PRODUTO
   	function atualizar_estoque ($json_produtos) {
   		try {
-        // ACESSO AO BANCO
-    			$host   = "localhost";
-    			$dbname = "empresa";
-    			$dbuser = "root";
-    			$dbpass = "root";
-    			$pdo = new PDO('mysql:host='.$host.';dbname='.$dbname.';', $dbuser, $dbpass);
-  
-  			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  			$pdo->beginTransaction();
+        	// ACESSO AO BANCO
+	    			$host   = "localhost";
+	    			$dbname = "empresa";
+	    			$dbuser = "root";
+	    			$dbpass = "root";
+	    			$pdo = new PDO('mysql:host='.$host.';dbname='.$dbname.';', $dbuser, $dbpass);
+	  
+	  			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	  			$pdo->beginTransaction();
         
-        // UTILIZANDO LOTES PARA SALVAR AS INFORMAÇÕES PARCIAIS DOS COMMITS E PREVINIR FALHAS COM GRANDE QUANTIDADE DE INSERCOES DURANTE O PROCESSO
-    			$tamanho_lote = 1000;
-    			$contador = 0;
+        	// UTILIZANDO LOTES PARA SALVAR AS INFORMAÇÕES PARCIAIS DOS COMMITS E PREVINIR FALHAS COM GRANDE QUANTIDADE DE INSERCOES DURANTE O PROCESSO
+	    			$tamanho_lote = 1000;
+	    			$contador = 0;
 
   			foreach ($json_produtos as $estoque) {
   				try {
@@ -98,7 +98,7 @@
   		}
   	}
 
-	// FUNCAO UTILIZADA PARA TESTES DE FORMA A GERAR N REGISTROS DE ESTOQUE
+// FUNCAO UTILIZADA PARA TESTES DE FORMA A GERAR N REGISTROS DE ESTOQUE
   	function gerar_estoque ($size) {
   		$movimentacao_estoque = [];
   		for ($i = 0; $i < $size; $i++) {
