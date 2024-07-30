@@ -54,11 +54,11 @@
             if ($id != 0) {
               try {
                 // NESTA PARTE DO CÓDIGO FOI ENCONTRADO ESTOQUE DO PRODUTO COM A CHAVE ÚNICA, LOGO SERÁ ATUALIZADO A QUANTIDADE DO ESTOQUE
-                $sql = "UPDATE empresa.estoque SET quantidade=:quantidade WHERE id=:id";
-                $stmt = $pdo->prepare($sql);
-                $stmt->bindParam(':id', $id);
-                $stmt->bindParam(':quantidade', $quantidade);
-                $stmt->execute();    
+                  $sql = "UPDATE empresa.estoque SET quantidade=:quantidade WHERE id=:id";
+                  $stmt = $pdo->prepare($sql);
+                  $stmt->bindParam(':id', $id);
+                  $stmt->bindParam(':quantidade', $quantidade);
+                  $stmt->execute();    
               } catch (PDOException $e) {
                 $pdo->rollBack();
                 echo 'Falha ao atualizar quantidade do estoque: ' . $e->getMessage();
