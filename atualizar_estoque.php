@@ -120,8 +120,9 @@
     return $movimentacao_estoque;
   }
 
+  $json_produtos = [];
   // EXEMPLO PARA TESTAR OS REGISTROS
   	// $json_produtos = gerar_estoque(100);
-
+	
 	atualizar_estoque($json_produtos);
 ?>
