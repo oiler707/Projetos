@@ -28,19 +28,19 @@
 	// PRINCIPAL FUNCAO DO PROCESSO SELETIVO QUE ATUALIZA A QUANTIDADE DO ESTOQUE OU INSERE NOVO ESTOQUE DO PRODUTO
   	function atualizar_estoque ($json_produtos) {
   		try {
-        	// ACESSO AO BANCO
-	    			$host   = "localhost";
-	    			$dbname = "empresa";
-	    			$dbuser = "root";
-	    			$dbpass = "root";
-	    			$pdo = new PDO('mysql:host='.$host.';dbname='.$dbname.';', $dbuser, $dbpass);
-	  
-	  			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	  			$pdo->beginTransaction();
-        
-        	// UTILIZANDO LOTES PARA SALVAR AS INFORMAÇÕES PARCIAIS DOS COMMITS E PREVINIR FALHAS COM GRANDE QUANTIDADE DE INSERCOES DURANTE O PROCESSO
-	    			$tamanho_lote = 1000;
-	    			$contador = 0;
+        // ACESSO AO BANCO
+          $host   = "localhost";
+          $dbname = "empresa";
+          $dbuser = "root";
+          $dbpass = "root";
+          $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname.';', $dbuser, $dbpass);
+  
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->beginTransaction();
+
+        // UTILIZANDO LOTES PARA SALVAR AS INFORMAÇÕES PARCIAIS DOS COMMITS E PREVINIR FALHAS COM GRANDE QUANTIDADE DE INSERCOES DURANTE O PROCESSO
+          $tamanho_lote = 1000;
+          $contador = 0;
 
   			foreach ($json_produtos as $estoque) {
   				try {
@@ -99,26 +99,26 @@
   	}
 
 // FUNCAO UTILIZADA PARA TESTES DE FORMA A GERAR N REGISTROS DE ESTOQUE
-  	function gerar_estoque ($size) {
-  		$movimentacao_estoque = [];
-  		for ($i = 0; $i < $size; $i++) {
-  			$produto = sprintf('3.%03d.%05d', rand(1, 999), rand(1, 99999));
-  			$cor = sprintf('%02d', rand(0, 99));
-  			$tamanho = chr(rand(65, 90)); // Gera uma letra maiúscula
-  			$deposito = 'DEP' . rand(1, 20);
-  			$data_disponibilidade = date('Y-m-d', strtotime('+'.rand(0, 365).' days'));
-  			$quantidade = rand(1, 100);
-  			$movimentacao_estoque[] = [
-  				"produto" => $produto,
-  				"cor" => $cor,
-  				"tamanho" => $tamanho,
-  				"deposito" => $deposito,
-  				"data_disponibilidade" => $data_disponibilidade,
-  				"quantidade" => $quantidade
-  			];
-  		}
-  		return $movimentacao_estoque;
-  	}
+  function gerar_estoque ($size) {
+    $movimentacao_estoque = [];
+    for ($i = 0; $i < $size; $i++) {
+      $produto = sprintf('3.%03d.%05d', rand(1, 999), rand(1, 99999));
+      $cor = sprintf('%02d', rand(0, 99));
+      $tamanho = chr(rand(65, 90)); // Gera uma letra maiúscula
+      $deposito = 'DEP' . rand(1, 20);
+      $data_disponibilidade = date('Y-m-d', strtotime('+'.rand(0, 365).' days'));
+      $quantidade = rand(1, 100);
+      $movimentacao_estoque[] = [
+        "produto" => $produto,
+        "cor" => $cor,
+        "tamanho" => $tamanho,
+        "deposito" => $deposito,
+        "data_disponibilidade" => $data_disponibilidade,
+        "quantidade" => $quantidade
+      ];
+    }
+    return $movimentacao_estoque;
+  }
 
   // EXEMPLO PARA TESTAR OS REGISTROS
   	// $json_produtos = gerar_estoque(100);
