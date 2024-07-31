@@ -6,8 +6,9 @@
   // FUNCAO PARA VERIFICAR SE EXISTE ESTOQUE
     function verificar_estoque ($produto, $cor, $tamanho, $deposito, $data_disp, $pdo, $dbname) {
       try {
-        $sql = "SELECT id FROM ".$dbname.".estoque WHERE produto=:produto AND cor=:cor AND tamanho=:tamanho AND deposito=:deposito AND data_disponibilidade=:data_disp";
+        $sql = "SELECT id FROM :dbname.estoque WHERE produto=:produto AND cor=:cor AND tamanho=:tamanho AND deposito=:deposito AND data_disponibilidade=:data_disp";
         $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':dbname', $dbname);
         $stmt->bindParam(':produto', $produto);
         $stmt->bindParam(':cor', $cor);
         $stmt->bindParam(':tamanho', $tamanho);
@@ -54,8 +55,9 @@
             if ($id != 0) {
               try {
                 // NESTA PARTE DO CÓDIGO FOI ENCONTRADO ESTOQUE DO PRODUTO COM A CHAVE ÚNICA, LOGO SERÁ ATUALIZADO A QUANTIDADE DO ESTOQUE
-                  $sql = "UPDATE ".$dbname.".estoque SET quantidade=:quantidade WHERE id=:id";
+                  $sql = "UPDATE :dbname.estoque SET quantidade=:quantidade WHERE id=:id";
                   $stmt = $pdo->prepare($sql);
+                  $stmt->bindParam(':dbname', $dbname);
                   $stmt->bindParam(':id', $id);
                   $stmt->bindParam(':quantidade', $quantidade);
                   $stmt->execute();    
@@ -67,8 +69,9 @@
               continue;
             }
             // NESTA PARTE DO CÓDIGO NÃO FORAM ENCONTRADOS ESTOQUES DO PRODUTO DA CHAVE ÚNICA, LOGO SERÁ INSERIDO O NOVO ESTOQUE NO BANCO
-              $sql = "INSERT INTO ".$dbname.".estoque (produto, cor, tamanho, deposito, data_disponibilidade, quantidade) VALUES (:produto, :cor, :tamanho, :deposito, :data_disp, :quantidade)";
+              $sql = "INSERT INTO :dbname.estoque (produto, cor, tamanho, deposito, data_disponibilidade, quantidade) VALUES (:produto, :cor, :tamanho, :deposito, :data_disp, :quantidade)";
               $stmt = $pdo->prepare($sql);
+              $stmt->bindParam(':dbname', $dbname);
               $stmt->bindParam(':produto', $produto);
               $stmt->bindParam(':cor', $cor);
               $stmt->bindParam(':tamanho', $tamanho);
