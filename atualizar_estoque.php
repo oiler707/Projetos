@@ -92,7 +92,6 @@
         $pdo->commit();
         echo "Estoques inseridos com sucesso.";
       } catch (PDOException $e) {
-        $pdo->rollBack();
         echo 'Falha ao conectar com o banco: ' . $e->getMessage();
       }
     }
