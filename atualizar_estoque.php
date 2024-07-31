@@ -4,9 +4,9 @@
     set_time_limit(2000);
 
   // FUNCAO PARA VERIFICAR SE EXISTE ESTOQUE
-    function verificar_estoque($produto, $cor, $tamanho, $deposito, $data_disp, $pdo) {
+    function verificar_estoque ($produto, $cor, $tamanho, $deposito, $data_disp, $pdo, $dbname) {
       try {
-        $sql = "SELECT id FROM empresa.estoque WHERE produto=:produto AND cor=:cor AND tamanho=:tamanho AND deposito=:deposito AND data_disponibilidade=:data_disp";
+        $sql = "SELECT id FROM ".$dbname.".estoque WHERE produto=:produto AND cor=:cor AND tamanho=:tamanho AND deposito=:deposito AND data_disponibilidade=:data_disp";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':produto', $produto);
         $stmt->bindParam(':cor', $cor);
@@ -26,7 +26,7 @@
     }
 
   // PRINCIPAL FUNCAO DO PROCESSO SELETIVO QUE ATUALIZA A QUANTIDADE DO ESTOQUE OU INSERE NOVO ESTOQUE DO PRODUTO
-    function atualizar_estoque($json_produtos) {
+    function atualizar_estoque ($json_produtos) {
       try {
         // ACESSO AO BANCO
           $host = "localhost";
@@ -50,11 +50,11 @@
             $deposito = $estoque['deposito'];
             $data_disp = $estoque['data_disponibilidade'];
             $quantidade = $estoque['quantidade'];
-            $id = verificar_estoque($produto, $cor, $tamanho, $deposito, $data_disp, $pdo);
+            $id = verificar_estoque($produto, $cor, $tamanho, $deposito, $data_disp, $pdo, $dbname);
             if ($id != 0) {
               try {
                 // NESTA PARTE DO CÓDIGO FOI ENCONTRADO ESTOQUE DO PRODUTO COM A CHAVE ÚNICA, LOGO SERÁ ATUALIZADO A QUANTIDADE DO ESTOQUE
-                  $sql = "UPDATE empresa.estoque SET quantidade=:quantidade WHERE id=:id";
+                  $sql = "UPDATE ".$dbname.".estoque SET quantidade=:quantidade WHERE id=:id";
                   $stmt = $pdo->prepare($sql);
                   $stmt->bindParam(':id', $id);
                   $stmt->bindParam(':quantidade', $quantidade);
@@ -67,7 +67,7 @@
               continue;
             }
             // NESTA PARTE DO CÓDIGO NÃO FORAM ENCONTRADOS ESTOQUES DO PRODUTO DA CHAVE ÚNICA, LOGO SERÁ INSERIDO O NOVO ESTOQUE NO BANCO
-              $sql = "INSERT INTO empresa.estoque (produto, cor, tamanho, deposito, data_disponibilidade, quantidade) VALUES (:produto, :cor, :tamanho, :deposito, :data_disp, :quantidade)";
+              $sql = "INSERT INTO ".$dbname.".estoque (produto, cor, tamanho, deposito, data_disponibilidade, quantidade) VALUES (:produto, :cor, :tamanho, :deposito, :data_disp, :quantidade)";
               $stmt = $pdo->prepare($sql);
               $stmt->bindParam(':produto', $produto);
               $stmt->bindParam(':cor', $cor);
@@ -98,7 +98,7 @@
     }
 
   // FUNCAO UTILIZADA PARA TESTES DE FORMA A GERAR N REGISTROS DE ESTOQUE
-    function gerar_estoque($size) {
+    function gerar_estoque ($size) {
       $movimentacao_estoque = [];
       for ($i = 0; $i < $size; $i++) {
         $produto = sprintf('3.%03d.%05d', rand(1, 999), rand(1, 99999));
